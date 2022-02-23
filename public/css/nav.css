@@ -1,0 +1,38 @@
+.navcontainer {
+    height: 70px;
+    background-color: rgb(0 20 103 / 90%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navcontainer ul {
+    display: flex;
+    list-style: none;
+    
+}
+
+.navcontainer ul li {
+        margin: 20px;
+
+}
+
+.navcontainer a {
+    color: white;
+    text-decoration: none;
+}
+
+.navcontainer a:hover{
+color:rgb(247, 230, 1);
+transition: 0.3s ease-in-out;
+}
+
+
+/* Media querys 768PX - Tablet */
+
+@media screen and (max-width:768px){
+   .navcontainer{
+       display: none;
+   }
+
+}
