@@ -53,10 +53,11 @@ width: 30px;
 
 input.keywords {
     width: 300px;
-    height: 30px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    height: 40px;
+    border-radius: 15px 0 0 15px;
     border: none;
+    font-size: medium;
+    padding-left: 0.8rem;
 }
 
 .btnsearch {
@@ -64,8 +65,12 @@ input.keywords {
     background-color: #004b97;
     display: flex;
     align-items: center;
-    padding: 2px;
-    height: 30px;
+    padding: 8px;
+    height: 40px;
+    border-radius: 0 10px 10px 0;  
+}
+.btnsearch:hover{
+    background-color: #225991;
 }
 
 
