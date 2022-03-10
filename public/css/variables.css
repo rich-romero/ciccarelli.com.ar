@@ -6,3 +6,15 @@
     font-family: 'Roboto', sans-serif;
     
 }
+
+:root {
+    --background-color: #0f1923;   
+  --button-text-color: var(--background-color);
+  --button-text-color-hover: var(--button-background-color);
+  --border-color: #7D8082;
+  --button-background-color: #ece8e1;
+  --highlight-color: #ff4655;
+  --button-inner-border-color: transparent;
+  --button-bits-color: var(--background-color);
+  --button-bits-color-hover: var(--button-background-color);
+}
