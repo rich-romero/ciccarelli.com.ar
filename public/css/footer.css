@@ -31,11 +31,13 @@ footer .content .top{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+  flex-direction: column;
 }
 
 .content .top .logo-details{
   color: #fff;
   font-size: 23px;
+  margin-bottom: 7px;
 }
 
 .content .top .logo-details .logo_name{
@@ -70,7 +72,6 @@ footer .content .top{
   height: 40px;
   width: 40px;
   margin: 0 8px;
-  border-radius: 50%;
   text-align: center;
   line-height: 40px;
   color: #fff;
@@ -330,5 +331,34 @@ footer .bottom-details .bottom_text{
     width: 200px;
     height: 200px;
 }
+
+}
+
+
+.custom svg {
+  overflow: visible;
+  box-sizing: content-box;
+  color: white;
+}
+
+.custom {
+  color: white;
+}
+
+h3.moduletitle {
+  color: white;
+}
+
+p.adress{
+  margin: 10px 0;
+}
+
+p.email{
+  margin: 10px 0;
+
+}
+
+p.phone{
+  margin: 15px 0;
 
 }

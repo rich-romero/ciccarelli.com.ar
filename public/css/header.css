@@ -68,7 +68,9 @@ input.keywords {
     padding: 8px;
     height: 40px;
     border-radius: 0 10px 10px 0;  
+    cursor: pointer;
 }
+
 .btnsearch:hover{
     background-color: #225991;
 }
