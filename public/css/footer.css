@@ -14,8 +14,7 @@ body{
 }
 
 footer{
-  /* position: fixed; */
-  background: rgb(0 20 103 / 90%);  width: 100%;
+  background: #003B81;
   bottom: 0;
   left: 0;
 }
@@ -56,10 +55,11 @@ footer .content .top{
   user-select: none;
 }
 
-.content .top .logo-details img{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+
+
+
+.content .top .logo-details img {
+  width: 200px;
   position: relative;
   top: -4px;
 }
@@ -360,4 +360,8 @@ p.email{
 p.phone{
   margin: 15px 0;
 
+}
+
+.content .top .logo-details.logofooter {
+  width: 100px;
 }
