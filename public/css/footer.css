@@ -215,8 +215,7 @@ footer .content .link-boxes .box{
 
 footer .bottom-details{
   width: 100%;
-  background: #fee000;
-}
+  background: var(--button-background-color);}
 
 footer .bottom-details .bottom_text{
   max-width: 1250px;

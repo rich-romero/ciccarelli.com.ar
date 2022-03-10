@@ -51,3 +51,16 @@
     position: relative;
 }
 
+
+/* Competicion css */
+.row.zt-services {
+    display: flex;
+}
+
+.col-md-4.col-sm-3.wow.fadeInLeftBig {
+    margin: 15px;
+}
+
+p.des {
+    margin: 15px;
+}
