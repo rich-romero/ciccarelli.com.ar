@@ -5,6 +5,7 @@ let controller = require('../controllers/homeController.js') // Requerimos el co
 
 // GET - Listado de productos
 router.get('/', controller.home) // buscamos en el objeto controller el HOME
+router.get('/sobre-nosotros', controller.sobreNosotros) 
 
 
 module.exports = router

@@ -27,7 +27,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
 
@@ -282,7 +282,110 @@ video {
 /* End btn cicarelli */
 
 
+/* Section productos */
+.section_productos{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  background-color:  #fbfbfc;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textproductos{
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+
+
+
+.textproductos h2 {
+  color: #0b235c;
+  font-size: 37px;
+}
+
+.textproductos span {
+  font-size: 11px;
+  margin: 15px 0px;
+}
+
+.section_productos .containerimg{
+width: 500px;
+height: 300px;
+align-items: center;
+object-fit: contain;
+}
+
+.section_productos a {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(2 41 201 / 97%);
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.section_productos a:hover{
+  background-color: white;
+  border: 1px solid rgb(2 41 201 / 97%) ;
+  color: rgb(2 41 201 / 97%);
+}
+
+
+
+.catalogoshome{
+  width: 100%;
+  background-image: url(/images/bgsquare.jpg);
+  background-size: cover;
+  min-height: 350px;
+}
+
+.catalogoshome h2 {
+  margin: 20px;
+}
+
+.cat_title {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.catcontainerimg img{
+  width: 150px;
+}
+
+.cattitle span{
+  color: rgb(255 224 0);;
+}
+
+.catalogospdf {
+  margin: 0 50px;
+}
+
+.catalogospdf a {
+  text-decoration: none;
+}
+
+.containercatalogos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* Media querys tablet */
+
 @media screen and (max-width: 768px){
+
+.snimg{
+  width: 500px;
+}
+  
   .text {
     background: none;
 }
@@ -300,10 +403,38 @@ video {
   padding: 5px 15px;
 }
 
+.section_productos{
+  height: 500px;
+  flex-direction: column;
+}
+
+.section_productos .containerimg {
+  width: 400px;
+  height: 300px;
+}
+
 }
 /* Mobile mini */
 @media screen and (max-width: 400px){
+
+  .snimg{
+    width: 400px;
+  }
+
   .text p {
     font-size: 9px;
 }
+
+.text h2 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+
+.section_productos .containerimg {
+  width: 300px;
+  height: 200px;
+}
+
+
 }
