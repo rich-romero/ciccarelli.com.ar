@@ -29,3 +29,221 @@
     height: 100%;
     object-fit: cover;
   }
+
+
+  
+
+  /* Cinta en medio de video */
+  .text {
+    position: absolute;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(18, 49, 247, 0.38);
+    padding: 30px;
+}
+
+text h2 {
+  font-size: 28px;
+  color: rgb(255, 224, 0);
+}
+
+section.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Btn medio video */
+
+.primary {
+  font-family: "DIN Next LT Pro Bold";
+  font-weight: 400;
+  position: relative;
+  display: block;
+  font-size: 17px;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--v-white);
+  margin: 1rem;
+  padding: 0.7rem;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+}
+
+.primary::before {
+  top: 0px;
+  border-bottom: 0px;
+}
+
+.label {
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+}
+
+.label::before {
+  content: "";
+  height: 100%;
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+}
+
+.hover-effect {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  top: 0px;
+  left: -5%;
+  z-index: 1;
+  transform: translateX(-100%) skew(-10deg);
+  background-color: rgba(255, 244, 5, 0.73);
+  transition: transform 0.3s ease-out 0s;
+}
+
+.label-text {
+  position: relative;
+  display: block;
+  background-color: transparent;
+  z-index: 1;
+  padding: 7px 10px;
+}
+
+.label-text a {
+  color: white;
+  text-decoration: none;
+}
+
+.label-text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.6rem;
+  width: 0.6rem;
+  right: 0px;
+  bottom: 0px;
+  background-color: var(--v-black);
+  transition: background-color 0.2s ease-in 0s;
+}
+
+.primary::after {
+  bottom: 0px;
+  border-top: 0px;
+}
+
+
+/* Newsletter section */
+
+section.newsletters {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.newsletterscontainer {
+  padding: 15px;
+}
+
+.titlenewsletter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cardscontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsletterscards {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  color: rgb(34, 34, 34);
+  height: 240px;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerimg {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.containerimg img {
+  width: 100%;
+  height: 100%;
+}
+
+.titlecard {
+  color: rgb(255, 224, 0);
+  font-size: 17px;
+}
+
+.text h2 {
+  font-size: 28px;
+  color: rgb(255, 224, 0);
+}
+
+.titlenewsletter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.titlenewsletter a {
+  color: white;
+  background-color: rgba(7, 39, 173, 0.9);
+  margin-top: 20px;
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.titlenewsletter a:hover {
+  background-color: rgb(7, 39, 173);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+video {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px){
+  .text {
+    background: none;
+    margin-top: 55px;
+}
+
+.text h2 {
+  font-size: 18px;
+}
+.text h3 {
+  font-size: 15px;
+}
+.text p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+}
