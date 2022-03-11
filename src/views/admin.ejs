@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head'); %>
+
+<body>
+    <%- include('./partials/header'); %>
+    <%- include('./partials/nav'); %>
+    <main>
+        <div class="containerlogin">
+
+            <form action="/admin" method="POST" class="formlogin">
+
+                <div>
+                    <input name="email" id="email" type="email" placeholder="Email" value="<%= locals.old && old.email %>" />
+                    <span class="error" id="emailErrors">
+                        <%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : "" %>
+                    </span>
+                </div>
+
+                <div>
+                    <input name="pass" id="pass" type="password" name="pass" placeholder="Contraseña">
+                    <span class="error" id="passErrors">
+                        <%= (typeof errors != 'undefined' && errors.pass) ? errors.pass.msg : "" %>
+                    </span>
+                </div>
+
+                <button type="submit">Ingresar</button>
+
+            </form>
+
+            <span> <a href="/" class="link-login"> Volver al menú de inicio</a> </span>
+
+        </div>
+    </main>
+
+    <%- include('./partials/footer'); %>
+    <%- include('./partials/scripts'); %>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.containerlogin {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-login{
+    color: black;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+form.formlogin {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+}
+
+.formlogin input {
+    margin: 10px;
+}
