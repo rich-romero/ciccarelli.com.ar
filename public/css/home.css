@@ -437,3 +437,39 @@ object-fit: contain;
 
 
 }
+
+
+/* 404 Page CSS */
+
+.notfoundcontainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.notfoundcontainer img {
+  width: 800px;
+}
+
+.btn404home {
+  font-size: 14px;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  padding: 13px 30px;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #00377C;
+  min-width: 200px;
+  text-align: center;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.btn404home:hover {
+  color:black;
+  background-color: #EEECEB;
+  border:1px solid grey;
+}

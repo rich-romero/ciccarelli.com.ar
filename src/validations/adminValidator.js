@@ -22,15 +22,16 @@ module.exports = [
                 email: req.body.email
             }
         })
-        .then((user)=>{   
-                   
+        .then((user)=>{                
                 if(value === user.dataValues.pass){
                     return true;
                 }else{
                     return Promise.reject('Contraseña inválida.');
                 }
         });
+        
     })
+
 
         
       ]

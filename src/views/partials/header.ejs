@@ -23,15 +23,18 @@
                 <span>E-Shop</span>
             </div>
 
-        <!--     <div class="headerusuario">
-                <div class="containeruser">
-                    <a href="#">
-                        <box-icon class="carritoheader" name="user" color="white" size="md"></box-icon>
-                    </a>
-                    <span>Usuario</span>
-                </div>
-
-            </div> -->
+            <% if (typeof session.user !="undefined" ) { %>
+                <div class="headerusuario">
+                    
+                    <div class="containeruser">
+                        <a href="/admin/dashboard">
+                            <box-icon class="carritoheader" name="user" color="white" size="md"></box-icon>
+                        </a>
+                        <span>Admin</span>
+                    </div>
+    
+                </div> 
+            <% } %>  
 
         </div>
     </div>

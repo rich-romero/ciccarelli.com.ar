@@ -21,3 +21,22 @@ form.formlogin {
 .formlogin input {
     margin: 10px;
 }
+
+/* Dashboard */
+
+.dashboardcontainer {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnadmin a {
+    color: white;
+    background-color: blue;
+    outline: blue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 3px;
+}

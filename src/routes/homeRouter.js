@@ -19,9 +19,13 @@ router.get('/competicion', controller.competicion)
 /* Links de nav - Catalogo */
 
 /* Links de nav - Servicio */
-router.get('/servicio', controller.servicio) 
+router.get('/servicio', controller.servicio)
+//falta newsletter 
 
-router.get('/newsletters', controller.newsletters) 
+router.get('/noticias', controller.noticias) 
+
+router.get('/noticias/1/', controller.noticiaCuerpo) 
+
 
 /* Links de nav - Contacto */
 

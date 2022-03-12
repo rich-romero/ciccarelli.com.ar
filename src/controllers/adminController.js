@@ -40,14 +40,23 @@ processAdminLogin: (req, res) => {
             res.redirect('/')
             console.log('Iniciaste seccion exitosamente!')
         })
+        .catch(error => console.log(error))
+
     }else{
         res.render('admin', {
             errors: errors.mapped(),
             session: req.session,
             old: req.body
         })
-    }
+    }  
+    
    
+},
+
+dashboradAdmin: (req, res) => {
+    res.render('dashboradAdmin', {
+        session: req.session
+    })
 }
 
 
