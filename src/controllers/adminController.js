@@ -1,7 +1,10 @@
 const { validationResult } = require('express-validator')
-const bcrypt = require('bcryptjs');
+
 const db = require('../database/models');
 const Users = db.User;
+const Noticias = db.Noticia;
+const NoticiaImage = db.NoticiaImage
+
 
 let controller = {
     admin: (req,res) => {
@@ -57,6 +60,57 @@ dashboradAdmin: (req, res) => {
     res.render('dashboradAdmin', {
         session: req.session
     })
+},
+
+/* Crud noticias */
+
+noticiasCreate: (req, res) => {
+
+    Noticias.findAll()
+    .then((noticia) => {
+        console.log(noticia)
+        res.render('noticiasCreate', {
+            noticia,
+            session: req.session
+        })
+    })
+    .catch(error => console.log(error))
+
+},
+
+noticiasPost: (req, res) => {
+    let errors = validationResult(req)
+    console.log(errors)
+    if (errors.isEmpty()){
+        const { titulo, subtitulo, descripcion,} = req.body
+        Noticias.create({
+            titulo,
+            subtitulo,
+            descripcion,
+        })
+        .then((noticia) =>{
+            NoticiaImage.create({
+                image: req.file ? req.file.filename : 'default-image.png',
+                noticiaId: noticia.id
+            })
+                .then(()=> {
+                    res.redirect('/')
+                    console.log('Se creo la noticia con exito')
+                })
+          
+        }) 
+        .catch(error => console.log(error))
+    }else{
+         Noticias.findAll()
+        .then((noticia) => {
+            res.render('noticiasCreate', {
+                noticia,
+                session:req.session,
+                errors: errors.mapped(),
+                old: req.body
+            })
+        })
+    }
 }
 
 
