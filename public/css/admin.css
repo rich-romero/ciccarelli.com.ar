@@ -6,6 +6,9 @@
     align-items: center;
 }
 
+.logofooterlogin {
+    width: 200px;
+}
 .link-login{
     color: black;
     font-size: 13px;

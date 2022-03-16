@@ -1,15 +1,13 @@
-let express = require('express') //Llamamos express y enrutador
-let router = express.Router() //Ejecutamos el metodo router de express
-let controller = require('../controllers/homeController.js') // Requerimos el controlador para utilizarlo con router.get
+let express = require('express') 
+let router = express.Router() 
+let controller = require('../controllers/homeController.js') 
 
-
-// GET - Listado de productos
-router.get('/', controller.home) // buscamos en el objeto controller el HOME
+router.get('/', controller.home) 
 /* Links de nav - Empresa */
 router.get('/sobre-nosotros', controller.sobreNosotros) 
 router.get('/calidad', controller.calidad) 
 router.get('/exportacion', controller.exportacion) 
-router.get('/distribuidores', controller.distribuidores) 
+router.get('/distribuidores', controller.distribuidores) // Falta completar
 
 /* Links de nav - Competicion */
 router.get('/competicion', controller.competicion) 

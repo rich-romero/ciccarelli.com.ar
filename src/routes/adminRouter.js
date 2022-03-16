@@ -20,15 +20,15 @@ router.get('/dashboard/noticias'/* , adminCheck */ ,controller.dashboradAdminNot
 
 /* Crear noticia */
 router.get('/crear/noticia'/* , adminCheck  */ ,controller.noticiasCreate) 
-router.post('/crear/noticia',  uploadImages.array('image') , noticiasValidator , controller.noticiasPost)
+router.post('/crear/noticia', /* , adminCheck */ uploadImages.array('image') , noticiasValidator , controller.noticiasPost)
 
 /* Editar noticia */
-router.get('/editar/noticia/:id', controller.editNoticia)
-router.put('/editar/noticia/:id', uploadImages.array('image'), noticiasValidator , controller.updateNoticia)
+router.get('/editar/noticia/:id',/* , adminCheck */  controller.editNoticia)
+router.put('/editar/noticia/:id', /* , adminCheck */ uploadImages.array('image'), noticiasValidator , controller.updateNoticia)
 
 
 
 /* Eliminar noticia */
- router.delete('/delete/noticia/:id', controller.eliminarNoticia) 
+ router.delete('/delete/noticia/:id', /* , adminCheck */ controller.eliminarNoticia) 
 
 module.exports = router
