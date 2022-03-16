@@ -5,45 +5,52 @@
 <body>
     <%- include('./partials/header'); %>
     <%- include('./partials/nav'); %>
-<main>
+    <main>
 
 
 
- <h4 style="margin-left: 50px; margin-top: 10px;">NOTICIAS</h4>
- 
- <div class="containernoticias">
-     
+        <h4 style="margin-left: 50px; margin-top: 10px;">NOTICIAS</h4>
 
-    <% noticia.forEach(noticia => { %>
-        
-    <article class="module-news">
-        <a href="/noticias/:id/">
+        <div class="containernoticias">
 
-        <div class="volanta">
-            
-            <span class="cat">TC</span>
-            
-            <span class="date"><%= noticia.updatedAt %> </span>
+
+            <% noticia.forEach(noticia => { %>
+
+            <div>
+                <a href="/noticias/<%= noticia.id %>/">
+
+
+                    <article class="module-news">
+
+                        <div class="volanta">
+
+                            <span class="cat">TC</span>
+
+                            <span class="date"><%= noticia.fecha %> </span>
+                        </div>
+
+                        <h2><%= noticia.titulo %> </h2>
+                        <div class="imgcardnoticia">
+                            <!-- Falta hacer funcionar             <img src="/images/noticias/" alt="">
+                        -->
+                        </div>
+                        <p><%= noticia.descripcion %></p>
+
+                    </article>
+                </a>
+            </div>
+
+
+            <% }) %>
+
+
         </div>
-        
-        <h2><%= noticia.titulo %> </h2>
-        <div class="imgcardnoticia">
-            <img src="/images/noticias/noticiapng.jpg" alt="">
-        </div>
-        <p><%= noticia.descripcion %></p>
-    </a>
-    </article>
-
-    <% }) %>
-
-
- </div>
 
 
 
 
-    
-</main>
+
+    </main>
 
     <%- include('./partials/footer'); %>
 

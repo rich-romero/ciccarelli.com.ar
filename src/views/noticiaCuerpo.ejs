@@ -15,14 +15,14 @@
                 
                 <span class="cat">Cicarelli</span>
                 
-                <span class="date">09 MAR /</span>
-                <span class="time"> 10:38</span>
+                <span class="date"> <%= noticia.fecha %> </span>
+            
             </div>
             
-            <b>DÍA INTERNACIONAL DE LA MUJER
+            <b> <%= noticia.titulo %>
             </b>
 
-            <p>Desde la Cicarelli saludamos a todas las mujeres en su día, en especial a quienes acompañan de cerca a los pilotos. </p>
+            <p> <%= noticia.subtitulo %> </p>
 
         </div>         
       
@@ -35,7 +35,7 @@
                 <img src="/images/noticiapng.jpg" alt="">
             </div>
     
-            <span>Desde la Asociación Corredores Turismo Carretera queremos saludar a todas las mujeres en el Día Internacional de la Mujer, en especial, a las madres, hijas, esposas, hermanas y novias de todos los pilotos, quienes acompañan de cerca la pasión por el Turismo Carretera, como también a aquellas que trabajan en áreas dentro de la ACTC: gerencias, ACTC Media TV, Marketing, Hotelería, Administración, entre otras.
+            <span><%= noticia.descripcion %>
     
             </span>
         

@@ -24,7 +24,7 @@ router.get('/servicio', controller.servicio)
 
 router.get('/noticias', controller.noticias) 
 
-router.get('/noticias/1/', controller.noticiaCuerpo) 
+router.get('/noticias/:id/', controller.noticiaCuerpo) 
 
 
 /* Links de nav - Contacto */
