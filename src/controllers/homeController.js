@@ -1,6 +1,7 @@
 const db = require('../database/models');
 const Noticias = db.Noticia;
 const NoticiaImage = db.NoticiaImage
+const Producto = db.Producto
 
 let controller = {
     home: (req,res) => {
@@ -37,6 +38,16 @@ competicion: (req, res) => {
     res.render('competicion',{
             session: req.session
          })
+},
+
+productos: (req, res) => {
+    Producto.findAll()
+    .then((producto) => {
+        res.render('productos', {
+            producto,
+            session: req.session
+        })
+    })
 },
 
 servicio: (req, res) => {

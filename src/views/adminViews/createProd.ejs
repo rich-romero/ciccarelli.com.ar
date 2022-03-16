@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head'); %>
+
+<body>
+    <%- include('../partials/header'); %>
+    <%- include('../partials/navAdmin'); %>
+    <main>
+
+        <div class="container">
+
+                <h3>Crear un nuevo producto</h3>
+
+            <div class="formcontainer">
+                <form action="/admin/crear/producto" method="POST" enctype="multipart/form-data">
+                    <div class="inputform">
+
+                        <div class="inputform">
+                            <input type="text" placeholder="Nombre" name="nombre"
+                            value="<%= locals.old && old.nombre %>" >
+                            <% if (typeof errors != 'undefined' && errors.nombre ) { %>
+                            <small class="error"><%= errors.nombre.msg %></small>
+                            <% } %>
+                        </div>
+
+
+                        <input type="text" placeholder="Marca" name="marca" 
+                        value="<%= locals.old && old.marca %>">
+                        <% if (typeof errors != 'undefined' && errors.marca ) { %>
+                        <small class="error"><%= errors.marca.msg %></small>
+                        <% } %>
+                    </div>
+
+                    <div class="inputform">
+                        <input type="text" placeholder="Modelo" name="modelo"
+                        value="<%= locals.old && old.modelo %>" >
+                        <% if (typeof errors != 'undefined' && errors.modelo ) { %>
+                        <small class="error"><%= errors.modelo.msg %></small>
+                        <% } %>
+                    </div>
+
+                    <div class="inputform">
+                        <input type="text" placeholder="Motor" name="motor"
+                        value="<%= locals.old && old.motor %>" >
+                        <% if (typeof errors != 'undefined' && errors.motor ) { %>
+                        <small class="error"><%= errors.motor.msg %></small>
+                        <% } %>
+                    </div>
+
+                    <div class="inputform">
+                        <input type="text" placeholder="Cilindradas" name="cilindradas"
+                        value="<%= locals.old && old.cilindradas %>" >
+                        <% if (typeof errors != 'undefined' && errors.cilindradas ) { %>
+                        <small class="error"><%= errors.cilindradas.msg %></small>
+                        <% } %>
+                    </div>
+
+
+                    <div class="inputform">
+                        <input type="text" placeholder="Piezas" name="piezas"
+                        value="<%= locals.old && old.piezas %>" >
+                        <% if (typeof errors != 'undefined' && errors.piezas ) { %>
+                        <small class="error"><%= errors.piezas.msg %></small>
+                        <% } %>
+                    </div>
+
+
+                    <div class="inputform">
+                        <input type="file" name="image" aria-label="file example">
+                        <% if (typeof errors != 'undefined' && errors.image ) { %>
+                        <small class="error"><%= errors.image.msg %></small>
+                        <% } %>
+                    </div>
+
+                    <button type="submit">Cargar producto</button>
+
+
+
+                </form>
+            </div>
+
+
+        </div>
+    </main>
+
+    <%- include('../partials/footer'); %>
+
+
+    <%- include('../partials/scripts'); %>
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@ const db = require('../database/models');
 const Users = db.User;
 const Noticias = db.Noticia;
 const NoticiaImage = db.NoticiaImage
-
+const Producto = db.Producto
 
 let controller = {
     admin: (req, res) => {
@@ -41,7 +41,7 @@ let controller = {
 
                     res.locals.user = req.session.user;
 
-                    res.redirect('/')
+                    res.redirect('/admin/dashboard')
                     console.log('Iniciaste seccion exitosamente!')
                 })
                 .catch(error => console.log(error))
@@ -73,6 +73,18 @@ let controller = {
             })
         })
     },
+
+
+    dashboardAdminProductos: (req, res) => {
+        Producto.findAll()
+        .then((productos) => {
+            res.render('adminViews/dashboardAdminProductos', {
+                productos,
+                session: req.session
+            })
+        })
+    },
+
 
     /* Crud noticias */
 
@@ -144,7 +156,6 @@ let controller = {
     },
 
     updateNoticia: (req, res) => {
-
         Noticias.update({
             titulo : req.body.titulo,
             subtitulo : req.body.subtitulo,
@@ -166,7 +177,94 @@ let controller = {
         res.redirect('/admin/dashboard/noticias')
 
 
+    },
+
+
+    /* CRUD PRODUCTOS */
+
+    productoCreate: (req, res) => {
+        Producto.findAll()
+        .then((producto) => {
+            res.render('adminViews/createProd', {
+                producto,
+                session : req.session
+            })
+        })
+    },
+
+    productoPost: (req, res) => {
+        let errors = validationResult(req)
+        if(errors.isEmpty()){
+            Producto.create(
+                {
+                nombre: req.body.nombre,  
+                marca: req.body.marca,
+                modelo: req.body.modelo,
+                motor: req.body.motor,
+                cilindradas: req.body.cilindradas,
+                piezas: req.body.piezas,
+                image: req.file ? req.file.filename : 'default-image.png',
+            })
+            .then((product) => {
+                console.log('Se creo el producto con exito')
+                console.log(product)
+                res.redirect('/admin/dashboard/productos')
+            })
+            .catch(error => console.log(error))
+        }else{
+            Producto.findAll()
+            .then((product) => {
+                res.render('adminViews/createProd', {
+                    product,
+                    errors: errors.mapped(),
+                    old: req.body,
+                    session: req.session
+                })
+            })
+            .catch(error => console.log(error))
+        }
+        
+    },
+
+    editProducto: (req, res) => {
+        let productoId = Producto.findByPk(req.params.id)
+        .then((producto) => {
+            res.render('adminViews/editProd', {
+                producto,
+                productoId,
+                session: req.session
+            })
+        })
+    },
+
+    updateProducto: (req, res) => {
+        Producto.update({
+            nombre: req.body.nombre,  
+            marca: req.body.marca,
+            modelo: req.body.modelo,
+            motor: req.body.motor,
+            cilindradas: req.body.cilindradas,
+            piezas: req.body.piezas,
+        }, 
+        { where: {id: req.params.id} })
+        .then((producto) => {
+            res.redirect('/admin/dashboard/productos')
+            console.log(producto)
+        })
+        .catch(error => console.log(error))
+    },
+
+
+    eliminarProducto: (req, res) => {
+        Producto.destroy({
+            where : { id: req.params.id}
+        })
+
+        res.redirect('/admin/dashboard/productos')
+
+
     }
+    
 
     
 

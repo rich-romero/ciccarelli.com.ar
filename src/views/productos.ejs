@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head'); %>
+
+<body>
+    <%- include('./partials/header'); %>
+    <%- include('./partials/nav'); %>
+    <main>
+
+
+
+        <h4 style="margin-left: 50px; margin-top: 10px;">Productos</h4>
+
+        <div class="containerproducts">
+
+
+            <% producto.forEach(producto => { %>
+
+                <a class="cardproductsA" href="/noticias/<%= producto.id %>/">
+            <div class="cardproducts">
+            
+
+                    <h3><%= producto.nombre %> </h3>
+
+                    <div class="containerimgprods">
+                        <img src="/images/productos/<%= producto.image %> " alt="">
+                    </div>    
+                    <div class="textproducts">
+                        <span><%= producto.marca %> </span>
+                        <span><%= producto.modelo %> </span>
+                        <span><%= producto.motor %> </span>
+                        <span><%= producto.cilindradas %> </span>
+                        <span><%= producto.piezas %> </span>       
+                    </div>
+                   
+                </div>
+            </a>
+
+
+            <% }) %>
+
+
+        </div>
+
+
+
+
+
+    </main>
+
+    <%- include('./partials/footer'); %>
+
+
+    <%- include('./partials/scripts'); %>
+
+</body>
+
+</html>
