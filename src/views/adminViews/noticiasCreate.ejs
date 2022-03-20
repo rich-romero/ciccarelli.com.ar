@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head'); %>
+
+<body>
+    <%- include('../partials/header'); %>
+    <%- include('../partials/navAdmin'); %>
+    <main>
+
+        <div class="container">
+
+                <h3>Crear una nueva noticia</h3>
+
+            <div class="formcontainer">
+                <form action="/admin/crear/noticia" method="POST" enctype="multipart/form-data">
+                    <div class="inputform">
+                        <input type="text" placeholder="Titulo de noticia" name="titulo" 
+                        value="<%= locals.old && old.titulo %>">
+                        <% if (typeof errors != 'undefined' && errors.titulo ) { %>
+                        <small class="error"><%= errors.titulo.msg %></small>
+                        <% } %>
+                    </div>
+
+                    <div class="inputform">
+                        <input type="text" placeholder="Subtitulo" name="subtitulo"
+                        value="<%= locals.old && old.subtitulo %>" >
+                        <% if (typeof errors != 'undefined' && errors.subtitulo ) { %>
+                        <small class="error"><%= errors.subtitulo.msg %></small>
+                        <% } %>
+                    </div>
+
+                    <div class="inputform">
+                        <input type="text" placeholder="Descripcion" name="descripcion"
+                        value="<%= locals.old && old.descripcion %>" >
+                        <% if (typeof errors != 'undefined' && errors.descripcion ) { %>
+                        <small class="error"><%= errors.descripcion.msg %></small>
+                        <% } %>
+                    </div>
+
+                    <div class="inputform">
+                        <input type="file" name="image" aria-label="file example" multiple>
+                        <% if (typeof errors != 'undefined' && errors.image ) { %>
+                        <small class="error"><%= errors.image.msg %></small>
+                        <% } %>
+                    </div>
+
+                    <button type="submit">Subir noticia</button>
+
+
+
+                </form>
+            </div>
+
+
+        </div>
+    </main>
+
+    <%- include('../partials/footer'); %>
+
+
+    <%- include('../partials/scripts'); %>
+
+</body>
+
+</html>

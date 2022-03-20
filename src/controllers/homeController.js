@@ -1,3 +1,8 @@
+const db = require('../database/models');
+const Noticias = db.Noticia;
+const NoticiaImage = db.NoticiaImage
+const Producto = db.Producto
+
 let controller = {
     home: (req,res) => {
          res.render('home',{
@@ -35,6 +40,16 @@ competicion: (req, res) => {
          })
 },
 
+productos: (req, res) => {
+    Producto.findAll()
+    .then((producto) => {
+        res.render('productos', {
+            producto,
+            session: req.session
+        })
+    })
+},
+
 servicio: (req, res) => {
     res.render('servicio',{
             session: req.session
@@ -42,15 +57,58 @@ servicio: (req, res) => {
 },
 
 noticias: (req, res) => {
-    res.render('noticias',{
-            session: req.session
-         })
+    Noticias.findAll(
+      {  order: [
+            ['fecha', 'DESC'],
+        ]}
+        
+        /*  FALTA HACER FUNCIONAR   include: [{association: 'noticiaImages'}]*/   
+        
+)
+    .then((noticia)=> {
+        res.render('noticias', {
+            noticia,
+            session:req.session
+        })
+    })
 },
 
+
+/*  Prueba 2 no funciono, mismo error.
+noticias: (req, res) => {
+    let noticia = Noticias.findAll()
+     let noticiaimage =  NoticiaImage.findAll()
+     Promise.all([noticia, noticiaimage])
+     .then((noticia, noticiaimage)=> {
+         res.render('noticias', {
+             noticia,
+             noticiaimage,
+             session:req.session
+         })
+     })
+ },
+  */
+
 noticiaCuerpo: (req, res) => {
-    res.render('noticiaCuerpo', {
-        session:req.session
+
+    Noticias.findOne({
+        where: {
+            id: req.params.id
+        },
+      /* no funciona   
+      include: [{
+            association: 'noticiaImages'
+        }] */
     })
+    .then((noticia) => {
+        res.render('noticiaCuerpo', {
+            noticia,
+            session: req.session
+        })
+    })
+    .catch(error => console.log(error))
+
+
 }
 
 

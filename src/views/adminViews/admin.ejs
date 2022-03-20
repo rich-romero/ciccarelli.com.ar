@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head'); %>
+<%- include('../partials/head'); %>
 
 <body>
-    <%- include('./partials/header'); %>
-    <%- include('./partials/nav'); %>
+    <%- include('../partials/header'); %>
+    <%- include('../partials/navAdmin'); %>
     <main>
         <div class="containerlogin">
+
+            <h3>Login</h3>
+            <div class="logo-details">
+                <span class="logo_name"><img class="logofooterlogin" src="/images/cicarellilogofooter1.png" alt=""></span>
+              </div>
+
 
             <form action="/admin" method="POST" class="formlogin">
 
@@ -33,8 +39,8 @@
         </div>
     </main>
 
-    <%- include('./partials/footer'); %>
-    <%- include('./partials/scripts'); %>
+    <%- include('../partials/footer'); %>
+    <%- include('../partials/scripts'); %>
 
 </body>
 
