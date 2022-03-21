@@ -24,16 +24,21 @@
 
                         <div class="volanta">
 
-                            <span class="cat">TC</span>
+                            <span class="cat">Ciccarelli</span>
 
                             <span class="date"><%= noticia.fecha %> </span>
                         </div>
 
                         <h2><%= noticia.titulo %> </h2>
-                        <div class="imgcardnoticia">
-                            <!-- Falta hacer funcionar             <img src="/images/noticias/" alt="">
-                        -->
-                        </div>
+
+
+                        <% if (noticia.imagen) { %>
+                            <div class="imgcardnoticia">
+                                       <img src="/images/noticias/<%= noticia.imagen %> " alt="">
+                        
+                            </div>    
+                        <% } %>
+                        
                         <p><%= noticia.descripcion %></p>
 
                     </article>

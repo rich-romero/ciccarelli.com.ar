@@ -31,9 +31,12 @@
     <section class="cuerponoticia">
 
         <div class="noticiacontainer">
-            <div class="containernoticiaimg">
-                <img src="/images/noticiapng.jpg" alt="">
-            </div>
+            <% if (noticia.imagen) { %>
+                <div class="containernoticia">
+                 <img src="/images/noticias/<%= noticia.imagen %> " alt="">
+            
+                </div>    
+            <% } %>
     
             <span><%= noticia.descripcion %>
     
