@@ -115,7 +115,8 @@ let controller = {
                     titulo,
                     subtitulo,
                     descripcion,
-                    fecha: new Date()
+                    fecha: new Date(),
+                    imagen: req.file ? req.file.filename : 'default-image.png',
                 })
                 .then((noticia) => {
                     NoticiaImage.create({
