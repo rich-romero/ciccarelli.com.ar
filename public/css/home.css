@@ -52,8 +52,12 @@ section.showcase {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  background-color: black;
 }
 
+section.showcase video{
+   opacity: 0.25;
+}
 
 /* Newsletter section */
 
@@ -343,8 +347,10 @@ object-fit: contain;
 
 .catalogoshome{
   width: 100%;
+  background-color: #1c1c1c;
   background-image: url(/images/bgsquare.jpg);
   background-size: cover;
+  background-blend-mode: multiply;
   min-height: 350px;
 }
 
@@ -363,7 +369,7 @@ object-fit: contain;
 }
 
 .cattitle span{
-  color: rgb(255 224 0);;
+  color: rgb(255 224 0);
 }
 
 .catalogospdf {
