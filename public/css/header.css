@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-between;
     align-content: center;
-    background-color: rgb(0 20 103 / 90%);
+    background-color: rgba(0, 20, 103, 0.8);
     border-bottom: 1px solid white;
         position: fixed;
         z-index: 9999;
