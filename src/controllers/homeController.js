@@ -56,6 +56,12 @@ servicio: (req, res) => {
          })
 },
 
+juntas: (req, res) => {
+    res.render('juntas', {
+        session: req.session
+    })
+},
+
 noticias: (req, res) => {
     Noticias.findAll(
       {  order: [

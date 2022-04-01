@@ -387,9 +387,44 @@ object-fit: contain;
 }
 
 
+/* Calidad */
+.imgcalidadcontainer {
+  display: flex;
+  align-items: center;
+}
+
+.certifiedimg {
+  width: 150px;
+}
+
+img.expimgizq1 {
+  width: 500px;
+}
+
+.expimgizq {
+  width: 200px;
+  margin-left: 30px;
+}
+
+.exportacionimgtext {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
 /* Media querys tablet */
 
 @media screen and (max-width: 768px){
+
+  .exportacionimgtext {
+      flex-direction: column;
+  }
+
+  img.expimgizq1 {
+    width: 300px;
+  }
 
 .snimg{
   width: 500px;
@@ -425,6 +460,8 @@ object-fit: contain;
 }
 /* Mobile mini */
 @media screen and (max-width: 400px){
+
+
 
   .snimg{
     width: 400px;

@@ -1,0 +1,18 @@
+
+.juntasimg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.juntasdescription {
+    padding: 40px;
+    color: white;
+    background-color: #172974;
+}
+
+.juntas4img {
+    width: 320px;
+}
