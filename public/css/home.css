@@ -53,10 +53,12 @@ section.showcase {
   flex-wrap: wrap;
   align-items: center;
   background-color: black;
+  min-height: 400px;
 }
 
 section.showcase video{
    opacity: 0.25;
+   height: 100%;
 }
 
 /* Newsletter section */
@@ -87,15 +89,15 @@ section.newsletters {
   flex-direction: column;
   background-color: rgb(255, 255, 255);
   color: rgb(34, 34, 34);
-  height: 240px;
+  /* height: 240px; */
   width: 250px;
   align-items: center;
   justify-content: center;
 }
 
 .containerimg {
-  width: 150px;
-  height: 100px;
+  /* width: 150px; */
+  height: 200px;
   object-fit: cover;
 }
 
@@ -406,8 +408,8 @@ object-fit: contain;
   font-size: 15px;
 }
 .text p {
-  font-size: 12px;
-}
+/*   font-size: 12px;
+ */}
 .btn__inner{
   padding: 5px 15px;
 }
@@ -483,3 +485,4 @@ object-fit: contain;
   background-color: #EEECEB;
   border:1px solid grey;
 }
+

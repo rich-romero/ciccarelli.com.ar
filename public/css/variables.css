@@ -8,7 +8,7 @@
 }
 
 :root {
-    --background-color: #0f1923;   
+  --background-color: #0f1923;   
   --button-text-color: var(--background-color);
   --button-text-color-hover: var(--button-background-color);
   --border-color: #7D8082;
@@ -17,4 +17,40 @@
   --button-inner-border-color: transparent;
   --button-bits-color: var(--background-color);
   --button-bits-color-hover: var(--button-background-color);
+}
+
+.f36{
+  font-size: 36px;
+}
+.f24{
+  font-size: 24px;
+}
+.f12{
+  font-size: 12px;
+}
+
+.faz{
+  background-color: #00377C;
+}
+.fam{
+  background-color: rgb(255, 224, 0);
+}
+.fbc{
+  background-color: white;
+}
+.fne{
+  background-color: black;
+}
+
+.az{
+  background-color: #00377C;
+}
+.am{
+  background-color: rgb(255, 224, 0);
+}
+.bc{
+  background-color: white;
+}
+.ne{
+  background-color: black;
 }
