@@ -274,6 +274,15 @@ footer .bottom-details .bottom_text{
 }
 
 @media (max-width: 705px){
+.btnheader {
+    display: none;
+}
+
+.btnheadermobile{
+  display: flex;
+      justify-content: center;
+}
+
 
   img.sntitleimg {
     width: 600px;

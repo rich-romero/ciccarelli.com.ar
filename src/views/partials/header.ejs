@@ -1,85 +1,106 @@
-<header>
-    <div class="headercontainer">
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="logo">
-            <a href="/">
-                <img class="cicarellilogo" src="/images/cicarellilogoheader.png" alt="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="navbar">
+
+        <!-- Navbar logo -->
+        <div class="nav-header">
+            <div class="nav-logo">
+                <a href="#">
+                    <img class="logoimg" src="/images/cicarellilogoheader.png" width="145px" alt="logo">
+                </a>
+            </div>
+        </div>
+
+        <!-- responsive navbar toggle button -->
+        <input type="checkbox" id="nav-check">
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <!-- Navbar items -->
+        <div class="nav-links">
+
+
+            <!-- Dropdown menu -->
+            <div class="dropdown">
+                <a class="dropBtn" href="#">Nosotros
+                    <i class="fas fa-angle-down"></i>
+                </a>
+                <div class="drop-content">
+
+                    <a href="#">Distribuidores</a>
+
+
+                    <!-- Creating sub menu Dropdown -->
+                    <div class="dropdown2">
+                        <a class="dropBtn2" href="#">Empresa
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                        <div class="drop-content2">
+                            <a href="#">Historia</a>
+                            <a href="#">Calidad</a>
+                            <a href="#">Exportación</a>
+                        </div>
+                    </div>
+                    <div class="dropdown2">
+                        <a class="dropBtn2" href="#">Productos
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                        <div class="drop-content2">
+                            <a href="#">Juntas</a>
+                            <a href="#">Retenes</a>
+                            <a href="#">Bulones</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <a href="#">Novedades</a>
+            <a href="#">Servicios</a>
+
+            <div class="btnheadermobile">
+                <a class="btnmobileA" href="">
+                    <box-icon name="cart" color="white" size="sm"></box-icon>
+                    <span class="titlespan">Carrito</span>
+                </a>
+
+                <a class="btnmobileA" href="">
+                    <box-icon name="search" color="white" size="sm"></box-icon>
+                    <span class="titlespan"> Buscar
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="btnheader">
+            <a href="">
+                <box-icon name="cart" color="white" size="sm"></box-icon>
+            </a>
+
+            <a href="">
+                <box-icon name="search" color="white" size="sm"></box-icon>
             </a>
         </div>
 
-        <!-- 
-              <div class="search">
-            <form action="" method="get">
-                <input type="text" class="keywords" placeholder="Buscar...">
-                <button class="btnsearch" type="submit">
-                    <box-icon name="search-alt-2" color="white"></box-icon>
-                </button>
-            </form>
-        </div> -->
-
-        <div class="headercarrito">
-            <div class="containercarrito">
-                <a href="http://119.8.146.181:8181/PuntoDeVenta/Application.html">
-                    <box-icon class="carritoheader" name="cart" color="white" size="md"></box-icon>
-                </a>
-                <span>E-Shop</span>
-            </div>
-
-            <% if (typeof session.user !="undefined" ) { %>
-            <div class="headerusuario">
-
-                <div class="containeruser">
-                    <a href="/admin/dashboard">
-                        <box-icon class="carritoheader" name="user" color="white" size="md"></box-icon>
-                    </a>
-                    <span>Admin</span>
-                </div>
-
-            </div>
-            <% } %>
-
-        </div>
     </div>
+</body>
 
-    <!-- Header mobile -->
-    <header>
-
-
-        <div class="headercontainermobile">
-
-            <div class="containermenu">
-                <a href="#">
-                    <box-icon class="carritoheader" name="menu" color="white" size="md"></box-icon>
-                </a>
-            </div>
-
-            
-
-
-            <div class="logomobile">
-                <a href="/">
-                    <img class="cicarellilogo" src="/images/ciccarellilogo.png" alt="">
-                </a>
-            </div>
-
-            <div class="containercarrito">
-                <a href="#">
-                    <box-icon class="carritoheader" name="cart" color="white" size="md"></box-icon>
-                </a>
-
-            </div>
-
-
-
-        </div>
-
-
-
-
-
-    </header>
-
-
-
-
-</header>
+</html>
