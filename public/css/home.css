@@ -107,7 +107,7 @@ section.newsletters {
 }
 
 .titlecard {
-  color: rgb(255, 224, 0);
+  color: #0f1923;
   font-size: 17px;
 }
 
@@ -519,4 +519,9 @@ img.expimgizq1 {
   color:black;
   background-color: #EEECEB;
   border:1px solid grey;
+}
+
+
+.headercontainer a {
+  z-index: 99;
 }

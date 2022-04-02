@@ -14,8 +14,9 @@
             <div class="volanta">
                 
                 <span class="cat">Cicarelli</span>
-                
-                <span class="date"> <%= noticia.fecha %> </span>
+                <% if (noticia.fecha) { %>
+                    <span class="date"> <%= noticia.fecha %> </span>
+                                 <% } %>
             
             </div>
             

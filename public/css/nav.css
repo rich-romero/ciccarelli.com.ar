@@ -62,29 +62,28 @@ font-size: 15px;;
     position:absolute;
     top: 52px;  
     left:-1rem;
-    border-radius: 5px;
     width: 12rem;
-    padding:1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     visibility: hidden;
     transition: opacity 200ms ease-in-out;
-    border: 1px solid #b6b4b4;
     background-color: #ffffff;
     list-style: none;
     z-index: 10;
+    align-items: center;
 
 }
 
 
 
-.lidrop:hover{
+.lidrop:hover {
     background-color: #172974;
-        color: rgb(255, 255, 255); 
-    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-
 
 
 
@@ -220,3 +219,15 @@ img.list__img {
     color: blue;
 }
 
+a.a_drop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.scrolling-active {
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0.1);
+    transition: ease 1s;
+    z-index: 9;
+}
