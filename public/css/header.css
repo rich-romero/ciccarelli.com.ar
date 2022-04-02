@@ -75,7 +75,7 @@
     display: block;
     text-align: center;
     width: 50%;
-    background-color: rgb(9, 14, 90);
+    background-color: rgb(18 27 73);
     transition: all 0.3s ease-in;
     overflow-y: hidden;
     top: 70px;
@@ -112,7 +112,8 @@
   .navbar .nav-links .drop-content,
   .navbar .nav-links .drop-content2 {
     position: relative;
-    background-color: rgb(12 21 69);    top: 0px;
+    background-color: rgb(12 21 69);
+    top: 0px;
     left: 0px;
   }
   /* Text color */
@@ -120,7 +121,7 @@
     color: rgb(212, 212, 215);
   }
 
-   .navbar .nav-links .drop-content a:hover {
+  .navbar .nav-links .drop-content a:hover {
     color: #ffe000;
   }
 }
