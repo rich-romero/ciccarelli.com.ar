@@ -1,128 +1,189 @@
-.headercontainermobile{
-    display: none;
-   
+.navbar {
+  height: 70px;
+  width: 100%;
+  padding: 19px 30px;
+  background-color: #0b1752c9;
+  position: fixed;
+  z-index: 99999999999;
+  display: flex;
+  justify-content: space-between;
 }
 
-.headercontainer{
-    height: 100px;
+.navbar .nav-header {
+  display: inline;
+}
+.navbar .nav-header .nav-logo {
+  display: inline-block;
+  margin-top: -7px;
+}
+.navbar .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.navbar .nav-links .loginBtn {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-left: 20px;
+  font-size: 17px;
+  color: rgb(9, 14, 90);
+}
+.navbar .nav-links a {
+  padding: 10px 12px;
+  text-decoration: none;
+  color: white;
+}
+/* Hover effects */
+.navbar .nav-links a:hover {
+  color: #ffe000;
+  transition: 0.2s ease-in-out;
+}
+
+/* responsive navbar toggle button */
+.navbar #nav-check,
+.navbar .nav-btn {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .navbar .nav-btn {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .navbar .nav-btn label {
+    display: inline-block;
+    width: 80px;
+    height: 70px;
+    padding: 25px;
+  }
+  .navbar .nav-btn label span {
+    display: block;
+    height: 10px;
+    width: 25px;
+    border-top: 3px solid #eee;
+  }
+  .navbar .nav-btn label:hover,
+  .navbar #nav-check:checked ~ .nav-btn label {
+    background-color: rgb(9, 14, 90);
+    transition: all 0.5s ease;
+  }
+  .navbar .nav-links {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 50%;
+    background-color: rgb(9, 14, 90);
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    right: 0px;
+    z-index: 999999;
+  }
+  .navbar .nav-links a {
+    display: block;
+  }
+
+  /* when nav toggle button not checked */
+  .navbar #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+
+  /* when nav toggle button is checked */
+  .navbar #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  .navbar .nav-links .loginBtn {
+    padding: 10px 40px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(9, 14, 90);
+  }
+  /* Responsive dropdown code */
+  .navbar .nav-links .dropdown,
+  .navbar .nav-links .dropdown2 {
+    float: none;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-    background-color: rgba(0, 20, 103, 0.8);
-        position: fixed;
-        z-index: 9999;
-            top: 0;
+  }
+  .navbar .nav-links .drop-content,
+  .navbar .nav-links .drop-content2 {
+    position: relative;
+    background-color: rgb(12 21 69);    top: 0px;
+    left: 0px;
+  }
+  /* Text color */
+  .navbar .nav-links .drop-content a {
+    color: rgb(212, 212, 215);
+  }
+
+   .navbar .nav-links .drop-content a:hover {
+    color: #ffe000;
+  }
 }
 
-.headercontainer .cicarellilogo {
-    width: 230px;
-    padding: 20px;
+/* Dropdown menu CSS code */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.drop-content,
+.drop-content2 {
+  display: none;
+  position: absolute;
+  background-color: #0b1752;
+  min-width: 120px;
+  font-size: 16px;
+  top: 34px;
+  z-index: 1;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+/* on hover show dropdown */
+.dropdown:hover .drop-content,
+.dropdown2:hover .drop-content2 {
+  display: block;
+}
+/* drondown links */
+.drop-content a {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgb(197 197 250 / 24%);
+  display: block;
+  transition: all 0.5s ease !important;
+}
+.dropBtn .drop-content a:hover {
+  background-color: rgb(230, 230, 230);
+}
+/* .dropdown:hover .dropBtn, .dropdown2:hover .dropBtn2 {
+  background-color: rgba(0, 0, 0, 0.3);
+} */
+.dropdown2 .drop-content2 {
+  position: absolute;
+  left: 134px;
+  top: 0px;
+}
+.dropBtn2 i {
+  margin-left: 15px;
 }
 
-.headercarrito svg{
-width: 30px;
+.btnheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.carritoheader{
-    margin-right: 15px;
+box-icon {
+  margin-left: 20px;
+  font-size: 20px;
 }
 
-.containercarrito {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-size: 13px;
-    margin-right: 20px;
+.btnheadermobile {
+  display: none;
 }
 
-.headercarrito {
-    display: flex;
-    margin-right: 30px;
+span.titlespan {
+  position: relative;
+  top: -5px;
 }
-.containeruser {
-    display: flex;
-    color: white;
-    flex-direction: column;
-    font-size: 13px;
-}
-
-.search form{
-    display: flex;
-}
-
-
-input.keywords {
-    width: 300px;
-    height: 40px;
-    border-radius: 15px 0 0 15px;
-    border: none;
-    font-size: medium;
-    padding-left: 0.8rem;
-}
-
-.btnsearch {
-    border: none;
-    background-color: #004b97;
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    height: 40px;
-    border-radius: 0 10px 10px 0;  
-    cursor: pointer;
-}
-
-.btnsearch:hover{
-    background-color: #225991;
-}
-
-
-.search input::placeholder{
-    padding: 10px;
-}
-
-.search input:focus{
-    outline: none;
-}
-
-/* Header mobile */
-
-
-@media screen and (max-width: 999px){
-    .headercontainer .cicarellilogo {
-        width: 150px;
-        padding: 20px;
-    }
-}
-
-
-@media screen and (max-width:768px){
-    .headercontainer{
-        display: none;
-    }
-    .headercontainermobile {
-        display: flex;
-        background-color: rgb(0 20 103 / 90%);
-        height: 70px;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-    }
-
-    .containercarrito{
-        margin-right: 0px;
-    }
-
-    .carritoheader{
-        margin-right: 0px;
-    }
-
-
-    .logomobile .cicarellilogo{
-        width: 150px;
-    }
-    
- 
- }
-
