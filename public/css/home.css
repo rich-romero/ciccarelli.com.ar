@@ -30,6 +30,10 @@
     object-fit: contain;
   }
 
+  .logo {
+    z-index: 10;
+}
+
 
   /* Cinta en medio de video */
   .text {
