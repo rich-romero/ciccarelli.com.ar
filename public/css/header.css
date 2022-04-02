@@ -67,8 +67,10 @@
   }
   .navbar .nav-btn label:hover,
   .navbar #nav-check:checked ~ .nav-btn label {
-    background-color: rgb(9, 14, 90);
+    background-color: rgb(12 20 68);
     transition: all 0.5s ease;
+    border-radius: 50px;
+    border: 1px solid #a7a7a230;
   }
   .navbar .nav-links {
     position: absolute;
