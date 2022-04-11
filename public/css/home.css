@@ -33,7 +33,9 @@
   .logo {
     z-index: 10;
 }
-
+p,h1,h2,h3,h4{
+  text-align: center;
+}
 
   /* Cinta en medio de video */
   .text {
@@ -44,7 +46,7 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-    padding: 30px;
+    padding: 100px 30px 30px 30px;
 }
 
 text h2 {
@@ -56,8 +58,10 @@ section.showcase {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   background-color: black;
   min-height: 400px;
+  position: relative;
 }
 
 section.showcase video{
@@ -89,6 +93,7 @@ section.newsletters {
 }
 
 .newsletterscards {
+  transition: all 0.2s ease-in-out 0s;
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
@@ -97,6 +102,14 @@ section.newsletters {
   width: 250px;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
+  padding: 40px;
+  border: 3px solid #d3d3d3;
+  transition: all 0.2s ease-in-out 0s;
+}
+.newsletterscards:hover {
+  transition: all 0.2s ease-in-out 0s;
+  transform: scale(1.05);
 }
 
 .containerimg {
@@ -111,24 +124,37 @@ section.newsletters {
 }
 
 .titlecard {
-  color: #0f1923;
-  font-size: 17px;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
-.text h2 {
-  font-size: 28px;
+.text h2, .sectitle  {
+  font-size: 48px;
   color: rgb(255, 224, 0);
+}
+
+.text p{
+  font-size: 24px;
+}
+
+.titlenewsletter:nth-child(1){
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50px;
 }
 
 .titlenewsletter {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  
 }
 
 .titlenewsletter a {
   color: white;
-  background-color: rgba(7, 39, 173, 0.9);
+  background-color: #FFD100;
+  color: #002F87;
   margin-top: 20px;
   width: 250px;
   height: 40px;
@@ -142,16 +168,17 @@ section.newsletters {
 }
 
 .titlenewsletter a:hover {
-  background-color: rgb(7, 39, 173);
+  background-color: white;
   transition: all 0.2s ease-in-out 0s;
+  transform: scale(1.05);
 }
 
 video {
-  width: 100%;
+  min-width: 100%;
 }
 
 .pvideo{
-  margin: 0 100px;
+  margin: 0 10vw;
 }
 
 
@@ -440,11 +467,14 @@ img.expimgizq1 {
     background: none;
 }
 
-.text h2 {
-  font-size: 18px;
+.text h2, .sectitle  {
+  font-size: 36px;
 }
 .text h3 {
   font-size: 15px;
+}
+.text p {
+  font-size: 18px;
 }
 
 .btn__inner{
@@ -472,11 +502,11 @@ img.expimgizq1 {
   }
 
   .text p {
-    font-size: 9px;
+    font-size: 15px;
 }
 
-.text h2 {
-  font-size: 15px;
+.text h2, .sectitle {
+  font-size: 30px;
   margin-top: 15px;
 }
 
@@ -528,4 +558,20 @@ img.expimgizq1 {
 
 .headercontainer a {
   z-index: 99;
+}
+
+.gradtoblue{
+  position: absolute;
+  background: -moz-linear-gradient(0deg, #002F87ff 0%, #002F8700 50%, #002F8700 100%);
+background: -webkit-linear-gradient(0deg, #002F87ff 0%, #002F8700 50%, #002F8700 100%);
+background: linear-gradient(0deg, #002F87ff 0%, #002F8700 50%, #002F8700 100%);
+}
+
+.bgradcard{
+  border: 3px solid linear-gradient(0deg, #eeebe9 0%, #4c5354 25%, #e9e9ea 50%, #999ea3 87%, #b2b2b2 100%)
+}
+
+.textleft{
+  text-align: left;
+  transform: scale(0.8);
 }
