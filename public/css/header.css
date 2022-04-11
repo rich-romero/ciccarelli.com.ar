@@ -1,5 +1,6 @@
 .navbar {
   height: 70px;
+  top: 0;
   width: 100%;
   padding: 19px 30px;
   background-color: #0b1752c9;
@@ -46,7 +47,77 @@
   display: none;
 }
 
-@media (max-width: 700px) {
+
+/* Dropdown menu CSS code */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.drop-content,
+.drop-content2 {
+  display: none;
+  position: absolute;
+  background-color: #0b1752;
+  min-width: 120px;
+  font-size: 16px;
+  top: 34px;
+  z-index: 1;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+/* on hover show dropdown */
+.dropdown:hover .drop-content,
+.dropdown2:hover .drop-content2 {
+  display: block;
+}
+/* drondown links */
+.drop-content a {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgb(197 197 250 / 24%);
+  display: block;
+  transition: all 0.5s ease !important;
+}
+.dropBtn .drop-content a:hover {
+  background-color: rgb(230, 230, 230);
+}
+/* .dropdown:hover .dropBtn, .dropdown2:hover .dropBtn2 {
+  background-color: rgba(0, 0, 0, 0.3);
+} */
+.dropdown2 .drop-content2 {
+  position: absolute;
+  left: 134px;
+  top: 0px;
+}
+.dropBtn2 i {
+  margin-left: 15px;
+}
+
+.btnheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+box-icon {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.btnheadermobile {
+  display: none;
+}
+
+span.titlespan {
+  position: relative;
+  top: -5px;
+}
+
+
+
+@media (max-width: 731px) {
+
+    .btnheader {
+    display: none;
+}
   .navbar .nav-btn {
     display: inline-block;
     position: absolute;
@@ -126,67 +197,4 @@
   .navbar .nav-links .drop-content a:hover {
     color: #ffe000;
   }
-}
-
-/* Dropdown menu CSS code */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.drop-content,
-.drop-content2 {
-  display: none;
-  position: absolute;
-  background-color: #0b1752;
-  min-width: 120px;
-  font-size: 16px;
-  top: 34px;
-  z-index: 1;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
-}
-/* on hover show dropdown */
-.dropdown:hover .drop-content,
-.dropdown2:hover .drop-content2 {
-  display: block;
-}
-/* drondown links */
-.drop-content a {
-  padding: 12px 10px;
-  border-bottom: 1px solid rgb(197 197 250 / 24%);
-  display: block;
-  transition: all 0.5s ease !important;
-}
-.dropBtn .drop-content a:hover {
-  background-color: rgb(230, 230, 230);
-}
-/* .dropdown:hover .dropBtn, .dropdown2:hover .dropBtn2 {
-  background-color: rgba(0, 0, 0, 0.3);
-} */
-.dropdown2 .drop-content2 {
-  position: absolute;
-  left: 134px;
-  top: 0px;
-}
-.dropBtn2 i {
-  margin-left: 15px;
-}
-
-.btnheader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-box-icon {
-  margin-left: 20px;
-  font-size: 20px;
-}
-
-.btnheadermobile {
-  display: none;
-}
-
-span.titlespan {
-  position: relative;
-  top: -5px;
 }
