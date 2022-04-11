@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:ital,wght@0,100;0,300;0,500;1,200&family=Roboto:wght@300&family=Work+Sans:wght@100;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:ital,wght@0,100;0,300;0,500;1,200&family=Roboto:wght@300&family=Work+Sans:wght@100;300;700&family=Montserrat:ital,wght@0,200;0,600;0,900;1,500&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif;    
 }
 
 :root {
@@ -18,7 +17,38 @@
   --button-bits-color: var(--background-color);
   --button-bits-color-hover: var(--button-background-color);
 }
+/* 96px 19.2*/
+.f1{
+  font-size: 5vw;
+}
 
+/* 90px */
+.f2{
+  font-size: 4.6875vw;
+}
+/* 48px */
+.f3{
+  font-size: 2.5vw;
+}
+
+.fwxl{
+  font-weight: 200;
+}
+.fwm{
+  font-weight: 500;
+}
+.fwxb{
+  font-weight: 700;
+}
+
+.fsi{
+  font-style: italic;
+}
+
+
+.fup{
+  text-transform: uppercase;
+}
 .f36{
   font-size: 36px;
 }
@@ -30,10 +60,10 @@
 }
 
 .faz{
-  background-color: #00377C;
+  background-color: #002F87;
 }
 .fam{
-  background-color: rgb(255, 224, 0);
+  background-color: #FFD100;
 }
 .fbc{
   background-color: white;
@@ -43,14 +73,21 @@
 }
 
 .az{
-  background-color: #00377C;
+  color: #002F87;
 }
 .am{
-  background-color: rgb(255, 224, 0);
+  color: #FFD100;
 }
 .bc{
-  background-color: white;
+  color: white;
 }
 .ne{
-  background-color: black;
+  color: black;
+}
+
+.pr{
+  position: relative;
+}
+.pab{
+  position: absolute;
 }
