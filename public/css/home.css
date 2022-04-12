@@ -575,3 +575,9 @@ background: linear-gradient(0deg, #002F87ff 0%, #002F8700 50%, #002F8700 100%);
   text-align: left;
   transform: scale(0.8);
 }
+
+/* swiper point */
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #ffb900;
+}

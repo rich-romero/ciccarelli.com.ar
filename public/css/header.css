@@ -60,7 +60,7 @@
   background-color: #0b1752;
   min-width: 120px;
   font-size: 16px;
-  top: 34px;
+  top: 26px;
   z-index: 1;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
 }
@@ -140,7 +140,6 @@ span.titlespan {
   .navbar #nav-check:checked ~ .nav-btn label {
     background-color: rgb(12 20 68);
     transition: all 0.5s ease;
-    border-radius: 50px;
     border: 1px solid #a7a7a230;
   }
   .navbar .nav-links {
@@ -197,4 +196,9 @@ span.titlespan {
   .navbar .nav-links .drop-content a:hover {
     color: #ffe000;
   }
+}
+
+/* Smooth scrolling NAV */
+html {
+  scroll-behavior: smooth;
 }

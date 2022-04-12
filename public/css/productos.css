@@ -3,11 +3,12 @@
     justify-content: center;
     padding: 30px;
     flex-wrap: wrap;
+        margin-top: 50px;
+
 }
 
 .cardproducts {
     display: flex;
-    margin: 10px;
     height: 350px;
     padding: 20px;
     border-radius: 5px;

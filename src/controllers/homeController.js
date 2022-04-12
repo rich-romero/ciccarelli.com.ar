@@ -10,22 +10,13 @@ let controller = {
          })
 },
 
-sobreNosotros: (req, res) => {
+empresa: (req, res) => {
     res.render('sobreNosotros',{
         session: req.session
      })
 },
 
-calidad: (req, res) => {
-    res.render('calidad',{
-        session: req.session
-     })
-},
-exportacion: (req, res) => {
-    res.render('exportacion',{
-            session: req.session
-         })
-},
+
 //Vista distribuidores no funciona en la pagina oficial lo cual no sabia que poner en esta vista, 
 ///la deje armada pero falta rellenar con lo que va.
 distribuidores: (req, res) => {
