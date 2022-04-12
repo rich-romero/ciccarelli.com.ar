@@ -420,3 +420,7 @@ p.phone{
 .content .top .logo-details.logofooter {
   width: 100px;
 }
+
+footer || p,footer || h2, footer || h3{
+  text-align: left;
+}
