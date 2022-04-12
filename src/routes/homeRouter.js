@@ -30,6 +30,9 @@ router.get('/noticias/:id/', controller.noticiaCuerpo)
 
 /* Links de nav - Contacto */
 
+/* Search */
+router.get('/search', controller.search)
+
 
 
 

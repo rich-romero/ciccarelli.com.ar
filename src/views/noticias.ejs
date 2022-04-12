@@ -5,12 +5,18 @@
 <body>
     <%- include('./partials/header'); %>
     <%- include('./partials/nav'); %>
-    <main>
+    <main class="mainnoticias">
 
 
-
+         <div class="containerbuscarnoticia">
+             <form action="/search" method="get">
+                 <input type="text" name="keywords" placeholder="Buscar noticias">
+                 <button class="searchbutton">Buscar</button>
+             </form>
+         </div>
         
         <div class="containernoticias">
+
 
 
             <% noticia.forEach(noticia => { %>
