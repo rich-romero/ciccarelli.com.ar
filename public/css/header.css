@@ -199,6 +199,3 @@ span.titlespan {
 }
 
 /* Smooth scrolling NAV */
-html {
-  scroll-behavior: smooth;
-}

@@ -6,6 +6,10 @@
     font-family: 'Montserrat', sans-serif;    
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background-color: #0f1923;   
   --button-text-color: var(--background-color);
