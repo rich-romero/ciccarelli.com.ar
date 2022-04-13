@@ -4,9 +4,8 @@ let controller = require('../controllers/homeController.js')
 
 router.get('/', controller.home) 
 /* Links de nav - Empresa */
-router.get('/sobre-nosotros', controller.sobreNosotros) 
-router.get('/calidad', controller.calidad) 
-router.get('/exportacion', controller.exportacion) 
+router.get('/empresa', controller.empresa)
+
 router.get('/distribuidores', controller.distribuidores) // Falta completar
 
 /* Links de nav - Competicion */
@@ -30,6 +29,9 @@ router.get('/noticias/:id/', controller.noticiaCuerpo)
 
 
 /* Links de nav - Contacto */
+
+/* Search */
+router.get('/search', controller.search)
 
 
 

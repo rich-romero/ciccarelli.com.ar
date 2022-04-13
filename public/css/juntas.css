@@ -1,18 +1,39 @@
-
 .juntasimg {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .juntasdescription {
-    padding: 40px;
-    color: white;
-    background-color: #172974;
+  padding: 40px;
+  display: flex;
+  color: white;
+  background-color: #172974;
+  align-items: center;
+  justify-content: center;
+}
+
+.juntascontainer2 .juntasdescription {
+  background-color: #10131f;
 }
 
 .juntas4img {
-    width: 320px;
+  width: 320px;
+  border-radius: 5px;
+}
+
+.juntastext {
+  padding: 30px;
+}
+
+.banner {
+  background-color: #172974;
+}
+
+@media (max-width: 731px) {
+  .juntasdescription {
+    flex-direction: column;
+  }
 }

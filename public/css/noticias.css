@@ -1,143 +1,182 @@
-.dashboardcontainer{
-    display: flex;
-    align-items: center;
+.dashboardcontainer {
+  display: flex;
+  align-items: center;
 }
 
-
 article.module-news {
-    border: 1px solid #727273;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    height: 500px;
-    justify-content: flex-start;
-    margin: 20px;
-    cursor: pointer;
+  border: 1px solid #727273;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 500px;
+  justify-content: flex-start;
+  margin: 20px;
+  cursor: pointer;
 }
 
 .containernoticias {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    flex-wrap: wrap;
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Cards noticias */
 
 .cat {
-    background-color: blue; 
-    color: white; 
-    border-radius: 2px;
-     padding: 3px;
+  background-color: blue;
+  color: white;
+  border-radius: 2px;
+  padding: 3px;
 }
 
 .module-news h2 {
-    color: blue;
+  color: blue;
 }
 
 .module-news p {
-    color: black;
+  color: black;
 }
 
 .volanta .date {
-    color: grey;
+  color: grey;
 }
 
-.volanta .time{
-    color: black;
+.volanta .time {
+  color: black;
 }
 
 /* Cuerpo de las noticias */
 
-.headernoticias{
-    width: 100%;
-    height: 300px;
-    background-color: #d8d8d8;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.headernoticias {
+  width: 100%;
+  height: 300px;
+  background-color: #d8d8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.noticiacontainer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px;
+.noticiacontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
 }
 
-.containerheaderinfo{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.containerheaderinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
-
 
 .containerheaderinfo b {
-    padding: 2px;
-    display: flex;
-    color: blue;
-    border-radius: 5px;
-    font-size: 32px;
+  padding: 2px;
+  display: flex;
+  color: blue;
+  border-radius: 5px;
+  font-size: 32px;
 }
 
-.cuerponoticia{
-    width: 100%;
+.cuerponoticia {
+  width: 100%;
 }
 
 .containernoticiaimg {
-    width: 70%;
+  width: 70%;
 }
 
-.containernoticiaimg img{
-    width: 100%;
-    height: 100%;
+.containernoticiaimg img {
+  width: 100%;
+  height: 100%;
 }
-
-
 
 /*  */
 
 .container {
-    width: 100%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.inputform input{
-    border: 1px solid blue;
-    padding: 5px;
-    border-radius: 5px;
-    margin:7px;
+.inputform input {
+  border: 1px solid blue;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 7px;
 }
 
 .formcontainer button {
-    background-color: #0d22a7;
-    color: white;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #0d22a7;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .formcontainer form {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .imgcardnoticia {
-    width: 100%;
+  width: 100%;
 }
 
 .imgcardnoticia img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainnoticias {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+}
+.containerbuscarnoticia {
+  height: 138px;
+  width: 100%;
+  background-color: #0c156a;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+button.searchbutton {
+  padding: 9px;
+  background-color: white;
+  border: none;
+  color: blue;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  outline: yellow;
+  border: 1px solid grey;
+  padding: 9px;
+  border-radius: 5px;
+}
+
+button.searchbutton:hover {
+  background-color: #0c156a;
+  color: white;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+
+input[type="text"]::placeholder {
+  color: #53545e;
+  font-weight: 600;
 }

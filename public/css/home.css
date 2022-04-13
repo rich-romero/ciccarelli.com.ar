@@ -33,9 +33,11 @@
   .logo {
     z-index: 10;
 }
-p,h1,h2,h3,h4{
+/* p,h1,h2,h3,h4{
   text-align: center;
-}
+} */
+/* Rick */
+
 
   /* Cinta en medio de video */
   .text {
@@ -578,4 +580,12 @@ background: linear-gradient(0deg, #002F87ff 0%, #002F8700 50%, #002F8700 100%);
   transform: scale(0.8);
 }
 
+<<<<<<< HEAD
 .cattitle s
+=======
+/* swiper point */
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #ffb900;
+}
+>>>>>>> 97276a9366f8b0d5435287aeea9c8b254d9e0480

@@ -9,33 +9,29 @@
 
 
 
-        <h4 >Productos</h4>
 
         <div class="containerproducts">
 
-
             <% producto.forEach(producto => { %>
 
+            <!-- new -->
+            <div class="newsletterscards" style="margin: 30px 10px;">
                 <a class="cardproductsA" href="/noticias/<%= producto.id %>/">
-            <div class="cardproducts">
-            
 
-                    <h3><%= producto.nombre %> </h3>
-
-                    <div class="containerimgprods">
+                    <div class="containerimg">
                         <img src="/images/productos/<%= producto.image %> " alt="">
-                    </div>    
+                    </div>
+                    <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
                     <div class="textproducts">
                         <span><%= producto.marca %> </span>
                         <span><%= producto.modelo %> </span>
                         <span><%= producto.motor %> </span>
                         <span><%= producto.cilindradas %> </span>
-                        <span><%= producto.piezas %> </span>       
+                        <span><%= producto.piezas %> </span>
                     </div>
-                   
-                </div>
-            </a>
+                </a>
 
+            </div>
 
             <% }) %>
 
