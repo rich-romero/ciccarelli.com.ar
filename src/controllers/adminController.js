@@ -64,7 +64,11 @@ let controller = {
     },
 
     dashboradAdminNoticias: (req,res) => {
-        Noticias.findAll()
+        Noticias.findAll({
+            order: [
+                ['fecha', 'DESC']
+            ]
+        })
         .then((noticia) => {
             res.render('adminViews/dashboardAdminNoticias', {
                 title: 'Ciccarelli - Admin',
@@ -76,7 +80,11 @@ let controller = {
 
 
     dashboardAdminProductos: (req, res) => {
-        Producto.findAll()
+        Producto.findAll({
+             order: [
+                 ['updatedAt', 'DESC']
+             ]
+        })
         .then((productos) => {
             res.render('adminViews/dashboardAdminProductos', {
                 productos,
@@ -120,7 +128,7 @@ let controller = {
                 })
                 .then((noticia) => {
                     NoticiaImage.create({
-                            image: req.body.file ? req.file.filename : 'default-image.png',
+                            image: req.file ? req.file.filename : 'default-image.png',
                             noticiaId: noticia.id
                         })
                         .then(() => {

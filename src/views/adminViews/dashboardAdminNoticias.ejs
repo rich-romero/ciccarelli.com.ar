@@ -3,19 +3,18 @@
 <%- include('../partials/head'); %>
 
 <body>
-    <%- include('../partials/header'); %>
     <%- include('../partials/navAdmin'); %>
 <main>
+    
+         <div>
+             <h3 style="margin-top: 150px; text-align: center;"> Todas las noticias - Juntas Ciccarelli</h3>
+         </div>
 
  <div class="dashboardcontainer">
 
-     <div>
-         <h3 style="margin-top: 10px;"> Todas las noticias - Juntas Ciccarelli</h3>
-     </div>
-
      <% noticia.forEach(noticia => { %>
         <div class="cardAdmin">
-            <a href="/products/detail/<%- noticia.id %>">
+                <a href="/noticias/<%= noticia.id %>/">
                 <div class="descriptionAdmin">
                     <h1> <%= noticia.titulo %> </h1>
                     <span><%- noticia.subtitulo %></span>

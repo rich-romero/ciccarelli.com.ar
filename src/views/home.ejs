@@ -38,8 +38,29 @@
           <h2 class="titlenewsletter sectitle f2 fwxl am fup">Próximos Lanzamientos</h2>
 
         <div class="cardscontainer">
+          <% producto.forEach(producto => { %>
 
-          <div class="newsletterscards" style="margin: 30px 10px;">
+             <div class="newsletterscards" style="margin: 30px 10px;">
+               <a class="cardproductsA" href="/productos/<%= producto.id %>/">
+
+                 <div class="containerimg">
+                   <img src="/images/productos/<%= producto.image %> " alt="">
+                 </div>
+                 <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
+                 <div class="textproducts">
+                   <span><%= producto.marca %> </span>
+                   <span><%= producto.modelo %> </span>
+                   <span><%= producto.motor %> </span>
+                   <span><%= producto.cilindradas %> </span>
+                   <span><%= producto.piezas %> </span>
+                 </div>
+               </a>
+
+             </div>
+
+          <% }) %>
+
+         <!--  <div class="newsletterscards" style="margin: 30px 10px;">
             <div class="containerimg">
               <img src="/images/news1.jpg" alt="">
             </div>
@@ -61,11 +82,11 @@
             </div>
             <span class="titlecard f3 az fwxb">Honda-Civic</span>
             <small>Junta Tapa de Cilindro</small>
-          </div>
+          </div> -->
         </div>
 
         <div class="titlenewsletter">
-          <h2><a href="#">Ver newsletters</a></h2>
+          <h2><a href="/productos">Ver newsletters</a></h2>
         </div>
 
       </div>

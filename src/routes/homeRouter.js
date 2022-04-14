@@ -14,6 +14,9 @@ router.get('/competicion', controller.competicion)
 /* Links de nav - Productos */
 router.get('/productos', controller.productos)
 
+router.get('/productos/:id/', controller.productosCuerpo)
+
+
 /* Links de nav - Catalogo */
 
 /* Links de nav - Servicio */
@@ -30,9 +33,11 @@ router.get('/noticias/:id/', controller.noticiaCuerpo)
 
 /* Links de nav - Contacto */
 
-/* Search */
+/* Search noticias */
 router.get('/search', controller.search)
 
+/* Search productos */
+router.get('/searchProducts', controller.searchProducts)
 
 
 
