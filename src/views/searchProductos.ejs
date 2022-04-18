@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head'); %>
+
+<body>
+    <%- include('./partials/header'); %>
+    <%- include('./partials/nav'); %>
+    <main>
+
+
+
+
+        <div class="containerproducts">
+
+  <!--  
+        Ricky   
+    <div class="results">
+       <h3>Resultados de la búsqueda: <b><%- search %></b> </h3>
+   </div> -->
+
+            <% if(producto.length >= 1){ %>
+
+            <% producto.forEach(producto => { %>
+
+            <div class="newsletterscards" style="margin: 30px 10px;">
+                <a class="cardproductsA" href="/noticias/<%= producto.id %>/">
+
+                    <div class="containerimg">
+                        <img src="/images/productos/<%= producto.image %> " alt="">
+                    </div>
+                    <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
+                    <div class="textproducts">
+                        <span><%= producto.marca %> </span>
+                        <span><%= producto.modelo %> </span>
+                        <span><%= producto.motor %> </span>
+                        <span><%= producto.cilindradas %> </span>
+                        <span><%= producto.piezas %> </span>
+                    </div>
+                </a>
+
+            </div>
+            <% }) %>
+
+            <% } else{ %>
+
+            <div class="noresultcontainer">
+
+                <div class="noresultdiv">
+                    <span class="searchresulth2">Resultados de la búsqueda: <b><%- search %></b> </span>
+                </div>
+
+                <div class="noResults"><svg class="BannerNoSuggestion_NotFoundImageStyled-shopping-uisc-vjcb3w-0 gLxMkm"
+                        xmlns="http://www.w3.org/2000/svg" width="70" height="66" viewBox="0 0 70 66">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M0 0h70v66H0z"></path>
+                            <path fill="#CDC2F2" fill-rule="nonzero"
+                                d="M35 14c10.493 0 19 8.507 19 19s-8.507 19-19 19-19-8.507-19-19 8.507-19 19-19zm.5 5C27.492 19 21 25.492 21 33.5S27.492 48 35.5 48 50 41.508 50 33.5 43.508 19 35.5 19z">
+                            </path>
+                            <path fill="#654BB9" fill-rule="nonzero"
+                                d="M50.399 43.032l13.306 13.306a3.849 3.849 0 1 1-5.444 5.443L44.955 48.475l-.063-.066a18.08 18.08 0 0 0 5.44-5.44l.067.063zM35.177 13.253c11.046 0 20 8.955 20 20 0 11.046-8.954 20-20 20s-20-8.954-20-20c0-11.045 8.954-20 20-20zm0 2c-9.941 0-18 8.06-18 18 0 9.942 8.059 18 18 18s18-8.058 18-18c0-9.94-8.059-18-18-18z">
+                            </path>
+                            <path fill="#654BB9" fill-rule="nonzero"
+                                d="M35.177 17.799c8.535 0 15.455 6.92 15.455 15.454 0 8.536-6.92 15.455-15.455 15.455s-15.455-6.92-15.455-15.455S26.642 17.8 35.177 17.8zm0 2c-7.43 0-13.455 6.024-13.455 13.454 0 7.431 6.024 13.455 13.455 13.455 7.43 0 13.455-6.024 13.455-13.455 0-7.43-6.024-13.454-13.455-13.454zM5.526 24.438c-4.732 16.503 4.667 33.71 21.03 38.691l.498.147.556-1.938C12.167 56.91 3.172 40.918 7.334 25.462l.13-.468-1.938-.556zm59.279 18.105c4.732-16.503-4.668-33.71-21.03-38.691l-.499-.147-.555 1.938c15.443 4.428 24.438 20.42 20.276 35.876l-.13.468 1.938.556z">
+                            </path>
+                            <path fill="#654BB9" stroke="#654BB9"
+                                d="M23.977 58.229l-1.328 6.241 7.79-1.942zM45.345 7.744l1.328-6.241-7.789 1.942z">
+                            </path>
+                        </g>
+                    </svg>
+                    <div class="styledStyledSubtitle-shopping-uisc-1eiyye1-4 gcVYMO">
+                        <p>No encontramos resultados para <span
+                                class="styledSemiBoldSpan-shopping-ui_sc-1eiyye1-9 ipvZnN"><%- search %>.</span>
+                        </p>
+                        <p>Utilizá palabras genéricas o navegá por las categorías para encontrar productos
+                            similares.</p>
+                    </div>
+                </div>
+
+                <a style="color: black; text-decoration: underline; margin-top: 10px;" href="/productos">Volver a la
+                    sección Productos</a>
+
+            </div>
+
+
+            <% } %>
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </main>
+
+    <%- include('./partials/footer'); %>
+
+
+    <%- include('./partials/scripts'); %>
+
+</body>
+
+</html>

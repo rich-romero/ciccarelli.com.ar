@@ -1,7 +1,4 @@
-.dashboardcontainer {
-  display: flex;
-  align-items: center;
-}
+
 
 article.module-news {
   border: 1px solid #727273;
@@ -162,7 +159,7 @@ button.searchbutton {
   cursor: pointer;
 }
 
-input[type="text"] {
+.searchnoticiasinput {
   outline: yellow;
   border: 1px solid grey;
   padding: 9px;

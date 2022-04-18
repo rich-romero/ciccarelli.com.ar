@@ -6,8 +6,18 @@ const Producto = db.Producto
 
 let controller = {
     home: (req, res) => {
-        res.render('home', {
-            session: req.session
+        Producto.findAll({
+            order: [
+                ['updatedAt','DESC']
+            ],
+            limit:3 
+        })
+        .then((producto) => {
+            console.log(producto)
+            res.render('home', {
+                producto,
+                session: req.session
+            })
         })
     },
 
@@ -40,6 +50,22 @@ let controller = {
                     session: req.session
                 })
             })
+    },
+
+    productosCuerpo: (req, res) => {
+         Producto.findOne({
+                 where: {
+                     id: req.params.id
+                 },
+
+             })
+             .then((producto) => {
+                 res.render('productoCuerpo', {
+                     producto,
+                     session: req.session
+                 })
+             })
+             .catch(error => console.log(error))
     },
 
     servicio: (req, res) => {
@@ -122,13 +148,34 @@ let controller = {
             }
         })
         .then((noticia) => {
-            res.render('noticias', {
+            res.render('searchNoticias', {
                 noticia,
                 search: req.query.keywords,
                 session: req.session
             })
         })
+    },
+
+    searchProducts: (req, res) =>{
+          Producto.findAll({
+                  order: [
+                      ['createdAt', 'DESC'],
+                  ],
+                  where: {
+                      nombre: {
+                          [Op.substring]: req.query.keywordss
+                      }
+                  }
+              })
+              .then((producto) => {
+                  res.render('searchProductos', {
+                      producto,
+                      search: req.query.keywordss,
+                      session: req.session
+                  })
+              })
     }
+    
          
 
 

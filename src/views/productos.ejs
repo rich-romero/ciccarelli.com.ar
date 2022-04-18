@@ -6,17 +6,14 @@
     <%- include('./partials/header'); %>
     <%- include('./partials/nav'); %>
     <main>
-
-
-
-
+        
         <div class="containerproducts">
 
             <% producto.forEach(producto => { %>
 
             <!-- new -->
             <div class="newsletterscards" style="margin: 30px 10px;">
-                <a class="cardproductsA" href="/noticias/<%= producto.id %>/">
+                <a class="cardproductsA" href="/productos/<%= producto.id %>/">
 
                     <div class="containerimg">
                         <img src="/images/productos/<%= producto.image %> " alt="">
