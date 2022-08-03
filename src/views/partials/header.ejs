@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Juntas Ciccarelli</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
@@ -18,7 +18,7 @@
         <div class="nav-header">
             <div class="nav-logo">
                 <a href="/">
-                    <img class="logoimg" src="/images/cicarellilogoheader.png" width="145px" alt="logo">
+                    <img class="logoimg" src="/images/cicarellilogoheader.png" width="200px" alt="logo">
                 </a>
             </div>
         </div>
@@ -26,7 +26,7 @@
         <!-- responsive navbar toggle button -->
         <input type="checkbox" id="nav-check">
         <div class="nav-btn">
-            <label for="nav-check">
+            <label for="nav-check" class="bgam">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -59,14 +59,15 @@
                         </div>
                     </div>
                     <div class="dropdown2">
-                        <a class="dropBtn2" href="/juntas">Productos
+                        <a class="dropBtn2" href="/productos">Productos
                             <i class="fas fa-angle-right"></i>
                         </a>
                         <div class="drop-content2">
-                            <a href="/juntas/#sectionjuntas">Juntas</a>
-                            <a href="/juntas/#sectionretenes">Retenes</a>
-                            <a href="/juntas/#sectionselladores">Selladores</a>
-                            <a href="/juntas/#sectionlimpiamanos">Limpiamanos</a>
+                            <a href="/productos/#sectionjuntasmls">Juntas MLS</a>
+                            <a href="/productos/#sectionjuntasnarso">Juntas Fibra</a>
+                            <a href="/productos/#sectionretenes">Retenes</a>
+                            <a href="/productos/#sectionformadoresdejuntas">Formadores de juntas</a>
+                            <a href="/productos/#sectionlimpiamanos">Limpiamanos</a>
 
                         </div>
                     </div>
@@ -80,7 +81,7 @@
                 </a>
                 <div class="drop-content">
 
-                    <a href="/productos">Newsletters</a>
+                    <a href="/newsletters">Newsletters</a>
                     <a href="/noticias">Noticias</a>
 
 
@@ -88,7 +89,7 @@
             </div>
 
             <div class="dropdown">
-                <a class="dropBtn" href="#">Catalogos
+                <a class="dropBtn" href="#">Catálogos
                     <i class="fas fa-angle-down"></i>
                 </a>
                 <div class="drop-content">
@@ -107,20 +108,24 @@
                 </a>
                 <div class="drop-content">
 
-                    <a href="#">Competicion</a>
-                    <a href="#">Informacion tecnica</a>
+                    <a href="#">Competición</a>
+                    <a href="#">Información técnica</a>
 
 
                 </div>
             </div>
 
-            <div class="btnheadermobile">
-
-                <a class="btnmobileA" href="">
+            <div class="btnheadermobile dropdown">
+                <!-- SE QUITA BOTON DE BUSQUEDA DE MENU MOBILE -->
+                <!-- <a class="btnmobileA dropBtn" href="">
                     <box-icon name="search" color="yellow" size="sm"></box-icon>
                     <span class="titlespan"> Buscar
                     </span>
                 </a>
+                <div class="drop-content">
+                    <a href="#">Competición</a>
+                    <a href="#">Información tecnica</a>
+                </div> -->
                 <a class="btnmobileA" href="">
                     <box-icon name="cart" color="yellow" size="sm"></box-icon>
                     <span class="titlespan">Carrito</span>
@@ -130,25 +135,27 @@
         </div>
 
         <div class="btnheader">
-            <a href="">
+            <a href="http://119.8.146.181:8181/PuntoDeVenta/Application.html">
                 <box-icon name="cart" color="yellow" size="md"></box-icon>
             </a>
 
-            <a href="">
+            <!-- Ahora no quieren buscador acá sino en los sitios -->
+            <!--  <a href="">
                 <box-icon name="search" color="yellow" size="md"></box-icon>
-            </a>
+            </a> -->
         </div>
-
-        <div>
+        <!-- Ahora no quieren buscador acá sino en los sitios -->
+        <!-- <div>
             <form method="get" action="/searchProducts" class="formheader">
                 <input type="text" name="keywordss" placeholder="Buscar productos">
                 <button type="submit" class="btnheadersearch">
                     <box-icon class="boxiconsearch" name="search" color="black" size="sm"></box-icon>
                 </button>
             </form>
-        </div>
+        </div> -->
 
     </div>
+<!--     <div class="gradtoblue" style="width: 100%;height: 10px;top: 0;z-index: 10;"></div> -->
 </body>
 
 </html>

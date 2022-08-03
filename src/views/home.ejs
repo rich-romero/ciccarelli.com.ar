@@ -5,7 +5,12 @@
 <body>
   <%- include('./partials/header'); %>
   <%- include('./partials/nav'); %>
-
+<!-- whatsapp -->
+<!-- 
+<a href="https://api.whatsapp.com/send?phone=+5491168661379" class="btn-wsp" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+ -->
   <main>
     <!-- Video inicial -->
     <section class="showcase">
@@ -15,8 +20,8 @@
       <div class="text" >
         <!-- <h1 class="f1 am">Juntas Ciccarelli</h2> -->
         <h2 class="f1 bc">85 AÑOS DE CALIDAD</h2>
-        <p class="f2 pvideo fwm fsi">Líder en Soluciones de Autopartes 
-          de Motor, con la mejor rentabilidad.</p>
+        <p class="f2 pvideo fwm fsi">Líder en Soluciones de Juntas 
+          de Motor, con la mejor calidad y rentabilidad del mercado.</p>
 
         <div><a href="ciccarelli.com.ar">
             <button class="btn btn--light">
@@ -35,7 +40,7 @@
     <!-- Section / Newsletters -->
     <section class="newsletters">
       <div class="newsletterscontainer faz pr">
-          <h2 class="titlenewsletter sectitle f2 fwxl am fup">Próximos Lanzamientos</h2>
+          <h2 class="titlenewsletter sectitle f2 fwxl am fup">Nuevos Lanzamientos</h2>
 
         <div class="cardscontainer">
           <% producto.forEach(producto => { %>
@@ -48,11 +53,11 @@
                  </div>
                  <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
                  <div class="textproducts">
-                   <span><%= producto.marca %> </span>
+                   <!-- <span><%= producto.marca %> </span>
                    <span><%= producto.modelo %> </span>
                    <span><%= producto.motor %> </span>
                    <span><%= producto.cilindradas %> </span>
-                   <span><%= producto.piezas %> </span>
+                   <span><%= producto.piezas %> </span> -->
                  </div>
                </a>
 
@@ -95,7 +100,7 @@
     </section>
 
     <!-- Section carousel -->
-    <section class="carousel">
+    <section class="carousel" style="position: relative; display: none;">
       <!-- Carousel / Colocar respectivos PNG aca -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -105,7 +110,7 @@
             <div class="textleft pab" style="padding:100px 20% 30px 30px;" >
               <!-- <h1 class="f1 am">Juntas Ciccarelli</h2> -->
                 
-                <h2 class="f1 am faz" style="line-height: 1.4;display: inline;padding: 0.2rem 0.7rem;opacity: 0.9;">85 AÑOS DE CALIDAD Y EL MEJOR SERVICIO</h2>
+                <h2 class="f1 am faz" style="line-height: 1.4;display: inline;padding: 0.2rem 0.7rem;opacity: 0.9;">85 AÑOS DE CALIDAD <br> Y EL MEJOR SERVICIO</h2>
                 <p class="f2 fwxb bc "style="font-size: 24px;text-align: left;color: white;margin-top: 10px;line-height: 1.1;text-shadow: 5px 4px 10px black;">Líder en Soluciones de Autopartes 
                   de Motor, con la mejor rentabilidad.</p>
                   <a class="cattitle fwsb" href="#" >
@@ -145,17 +150,17 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-      <div class="gradtoblue" style="width: 100%;height: 100px;top: 0;"></div>
+      <div class="gradtoblue" style="width: 100%;height: 100px;top: 0;transform:rotate(180deg);z-index: 10;"></div>
 
     </section>
 
     <!-- Section productos -->
     <section class="section_productos">
       <div class="textproductos">
-        <h2>CONOCE LA LINEA <br>
+        <h2>CONOCE LA LÍNEA <br>
         CICCARELLI</h2>
 <!--         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, distinctio rem, tempora accusantium repudiandae ea officia odio fugiat porro vel laudantium labore quae libero! Quod obcaecati repellat eum aut dicta.</span>
- -->        <a href="/productos">Ver Productos</a>
+ -->        <a class="hovexpand" href="/productos">Ver Productos</a>
       </div>
       <div class="containerimg">
         <img src="/images/prodscica.PNG" alt="">
@@ -166,52 +171,52 @@
     <section class="catalogoshome">
 
       <div class="cat_title">
-        <h2>Catalogos completos</h2>
+        <h2>CATÁLOGOS COMPLETOS</h2>
       </div>
 
       <div class="containercatalogos">
         
 
-        <div class="catalogospdf">
-          <a href="">
+        <div class="catalogospdf hovexpand">
+          <a href="https://drive.google.com/file/d/1OdLQgGZOEvFySCjy1hQHnNyS94ZbgaHa/view?usp=sharing" target="_blank">
           <div class="catcontainerimg">
             <img src="/images/catalogo-pesado.jpg" alt="">
           </div>
           <div class="cattitle">
-            <span>Linea pesada </span>
+            <span>Línea pesada </span>
           </div>
         </a>
         </div>
 
-        <div class="catalogospdf">
-          <a href="">
+        <div class="catalogospdf hovexpand">
+          <a href="https://drive.google.com/file/d/16vjXKcbSQMcfvbZvQmEhSSIIuniEE43o/view?usp=sharing" target="_blank">
           <div class="catcontainerimg">
             <img src="/images/catliviano.jpg" alt="">
           </div>
           <div class="cattitle">
-            <span>Linea liviana</span>
+            <span>Línea liviana</span>
           </div>
         </a>
         </div>
 
-        <div class="catalogospdf">
-          <a href="">
+        <div class="catalogospdf hovexpand">
+          <a href="https://drive.google.com/file/d/1_rox7ivLOUH_sFQ3O9m5Y8tx3qL2ZPBD/view?usp=sharing" target="_blank">
           <div class="catcontainerimg">
             <img src="/images/catalogo-competicion.jpg" alt="">
           </div>
           <div class="cattitle">
-            <span>Turbo</span>
+            <span>Línea Competición</span>
           </div>
         </a>
         </div>
 
-        <div class="catalogospdf">
-          <a href="">
+        <div class="catalogospdf hovexpand">
+          <a href="https://drive.google.com/file/d/1eEoHumKPmQK92_N5kyIjDWp01hRUBz-W/view?usp=sharing" target="_blank">
           <div class="catcontainerimg">
             <img src="/images/Catalogo-Compresores.jpg" alt="">
           </div>
           <div class="cattitle">
-            <span>Noticias</span>
+            <span>Compresores</span>
           </div>
         </a>
         </div>

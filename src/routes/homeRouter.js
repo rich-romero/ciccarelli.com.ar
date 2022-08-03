@@ -12,7 +12,7 @@ router.get('/distribuidores', controller.distribuidores) // Falta completar
 router.get('/competicion', controller.competicion) 
 
 /* Links de nav - Productos */
-router.get('/productos', controller.productos)
+router.get('/newsletters', controller.productos)
 
 router.get('/productos/:id/', controller.productosCuerpo)
 
@@ -24,7 +24,7 @@ router.get('/servicio', controller.servicio)
 //falta newsletter 
 
 /* Links de nav - Juntas */
-router.get('/juntas', controller.juntas)
+router.get('/productos', controller.juntas)
 
 router.get('/noticias', controller.noticias) 
 

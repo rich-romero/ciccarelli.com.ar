@@ -13,7 +13,7 @@
         <div class="containerheaderinfo">
             <div class="volanta">
                 
-                <span class="cat">CiccFarelli</span>
+                <span class="cat" style="font-weight:bold; padding:3px 7px ">Ciccarelli</span>
                 <% if (noticia.fecha) { %>
                     <span class="date"> <%= noticia.fecha %> </span>
                                  <% } %>
@@ -23,7 +23,7 @@
             <b> <%= noticia.titulo %>
             </b>
 
-            <p> <%= noticia.subtitulo %> </p>
+            <p style="font-size: 24px;"> <%= noticia.subtitulo %> </p>
 
         </div>         
       
@@ -34,12 +34,12 @@
         <div class="noticiacontainer">
             <% if (noticia.imagen) { %>
                 <div class="containernoticia">
-                 <img src="/images/noticias/<%= noticia.imagen %> " alt="">
+                 <img src="/images/noticias/<%= noticia.imagen %> " alt="" width="100%">
             
                 </div>    
             <% } %>
     
-            <span><%= noticia.descripcion %>
+            <span ><%= noticia.descripcion %>
     
             </span>
         

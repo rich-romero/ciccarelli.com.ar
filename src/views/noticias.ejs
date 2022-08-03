@@ -22,7 +22,7 @@
             <% noticia.forEach(noticia => { %>
 
             <div>
-                <a href="/noticias/<%= noticia.id %>/">
+                <a class="hovexpand" href="/noticias/<%= noticia.id %>/">
 
 
                     <article class="module-news">
@@ -38,13 +38,13 @@
 
 
                         <% if (noticia.imagen) { %>
-                            <div class="imgcardnoticia">
+                            <div class="imgcardnoticia" st>
                                        <img src="/images/noticias/<%= noticia.imagen %> " alt="">
                         
                             </div>    
                         <% } %>
                         
-                        <p><%= noticia.descripcion %></p>
+                        <p><%= noticia.descripcion.substr(0,130)+" ..." %></p>
 
                     </article>
                 </a>

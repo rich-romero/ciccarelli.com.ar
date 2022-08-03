@@ -118,6 +118,7 @@ section.newsletters {
   /* width: 150px; */
   height: 200px;
   object-fit: cover;
+  
 }
 
 .containerimg img {
@@ -337,7 +338,7 @@ video {
 .textproductos{
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 
@@ -345,7 +346,7 @@ video {
 
 .textproductos h2 {
   color: #0b235c;
-  font-size: 37px;
+  font-size: 48px;
 }
 
 .textproductos span {
@@ -354,10 +355,16 @@ video {
 }
 
 .section_productos .containerimg{
-width: 500px;
-height: 300px;
-align-items: center;
-object-fit: contain;
+  /* width: 500px;
+  height: 300px; */
+  max-width: 50%;
+  height: auto;
+  align-items: center;
+  object-fit: contain;
+  padding: 5vw;
+}
+.section_productos .containerimg{
+  
 }
 
 .section_productos a {
@@ -370,6 +377,7 @@ object-fit: contain;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 .section_productos a:hover{
@@ -387,30 +395,38 @@ object-fit: contain;
   background-size: cover;
   background-blend-mode: multiply;
   min-height: 350px;
+  padding: 50px;
 }
 
 .catalogoshome h2 {
   margin: 20px;
+  font-size: 48px;
+  margin-bottom: 50px;
 }
 
-.cat_title {
+.cat_title{
   color: white;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
 }
 
 .catcontainerimg img{
-  width: 150px;
+  width: 100%;
 }
 
+.cattitle{
+  margin: 10px 0;
+text-align: center;
+}
 .cattitle span{
   color: rgb(255 224 0);
-text-align: right;
 }
 
 .catalogospdf {
-  margin: 0 50px;
+  margin: 25px 50px;
+  width: 250px;
+  font-size: 24px;
+font-weight: 900;
 }
 
 .catalogospdf a {
@@ -419,7 +435,7 @@ text-align: right;
 
 .containercatalogos {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -490,9 +506,14 @@ img.expimgizq1 {
   flex-direction: column;
 }
 
-.section_productos .containerimg {
-  width: 400px;
-  height: 300px;
+.section_productos  text.containerimg {
+  width: 50%;
+    align-items: center;
+  object-fit: contain;
+  
+}
+.catalogospdf {
+  width: 200px;
 }
 
 }
@@ -515,12 +536,17 @@ img.expimgizq1 {
 }
 
 
-.section_productos .containerimg {
+/* .section_productos .containerimg {
   width: 300px;
   height: 200px;
+} */
+
+.section_productos .containerimg{
+  /* width: 500px;
+  height: 300px; */
+  max-width: 50%;
+
 }
-
-
 }
 
 
@@ -638,3 +664,46 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     -moz-box-shadow: 0px 1px 20px 0px rgba(0,0,0,0.41);
 }
 
+.hovexpand {
+  transition: all 0.2s ease-in-out 0s;
+ 
+}
+.hovexpand:hover {
+  transition: all 0.2s ease-in-out 0s;
+  transform: scale(1.05);
+}
+
+/* ----- BOTÓN WHATSAPP ----- */
+
+.btn-wsp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  line-height: 63px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 300ms ease;
+}
+
+.btn-wsp:hover {
+  background: #20ba5a;
+  color: #FFF;
+  transform: scale(1.1);
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+  .btn-wsp {
+      width: 63px;
+      height: 63px;
+      line-height: 66px;
+  }
+}
+
+/* ----- FIN BOTÓN WHATSAPP ----- */
