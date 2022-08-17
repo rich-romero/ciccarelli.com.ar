@@ -26,6 +26,8 @@ router.get('/servicio', controller.servicio)
 /* Links de nav - Juntas */
 router.get('/productos', controller.juntas)
 
+router.get('/newsletters', controller.productos)
+
 router.get('/noticias', controller.noticias) 
 
 router.get('/noticias/:id/', controller.noticiaCuerpo) 

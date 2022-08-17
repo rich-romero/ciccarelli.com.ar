@@ -17,14 +17,15 @@
 
       <div class="containerinfoproduct"style="WIDTH: 33%;padding: 20px;">
 
-        <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
+        <span class="titlecard f3 az fwxb" style="font-size: 36px;"><%= producto.nombre %></span>
 
         <div class="textproducts">
-          <span><%= producto.marca %> </span>
-          <span><%= producto.modelo %> </span>
-          <span><%= producto.motor %> </span>
-          <span><%= producto.cilindradas %> </span>
-          <span><%= producto.piezas %> </span>
+          <span><span class="az fwxb">MARCA: </span>
+          <%= producto.marca %> </span>
+          <span><span class="az fwxb">MODELO: </span><%= producto.modelo %> </span>
+          <span><span class="az fwxb">MOTOR: </span><%= producto.motor %> </span>
+          <span><span class="az fwxb">CILINDRADA: </span><%= producto.cilindradas %> </span>
+          <span><span class="az fwxb">PIEZAS: </span><%= producto.piezas %> </span>
         </div>
 
       </div>
