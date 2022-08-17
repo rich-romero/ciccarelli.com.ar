@@ -1,9 +1,9 @@
 module.exports =
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "juntascicarellidb",
+    "username": "ciccare_admin",
+    "password": "qr=u;e4vmjxd",
+    "database": "ciccare_juntascicarellidb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

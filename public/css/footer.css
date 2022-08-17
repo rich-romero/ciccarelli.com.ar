@@ -142,7 +142,7 @@ footer .content .link-boxes .box{
   left: 0;
   bottom: -2px;
   height: 2px;
-  width: 35px;
+  width: 80px;
   background: #fff;
 }
 
@@ -267,7 +267,7 @@ footer .bottom-details .bottom_text{
 
 }
 
-@media (max-width: 705px){
+@media (max-width: 800px){
 .btnheader {
     display: none;
 }
