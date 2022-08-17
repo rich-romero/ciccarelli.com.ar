@@ -64,6 +64,7 @@ section.showcase {
   background-color: black;
   min-height: 400px;
   position: relative;
+  overflow: hidden;
 }
 
 section.showcase video{
