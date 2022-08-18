@@ -7,15 +7,15 @@
   <%- include('./partials/nav'); %>
   <main style="padding: 100px 0 0;">
 
-    <div class="newsletterscards containerproductdetail" style="align-items: flex-start;">
-
-      <div class="imgproductdetail"style="WIDTH: 66%;">
+    <div class="newsletterscards containerproductdetail">
+      <span class="titlecard f3 az fwxb titmobproductdetail" style="font-size: 36px;"><%= producto.nombre %></span>
+      <div class="imgproductdetail">
         <div class="containerimg"style="height: auto;">
           <img src="/images/productos/<%= producto.image %> " alt="">
         </div>
       </div>
 
-      <div class="containerinfoproduct"style="WIDTH: 33%;padding: 20px;">
+      <div class="containerinfoproduct">
 
         <span class="titlecard f3 az fwxb" style="font-size: 36px;"><%= producto.nombre %></span>
 
@@ -25,7 +25,7 @@
           <span><span class="az fwxb">MODELO: </span><%= producto.modelo %> </span>
           <span><span class="az fwxb">MOTOR: </span><%= producto.motor %> </span>
           <span><span class="az fwxb">CILINDRADA: </span><%= producto.cilindradas %> </span>
-          <span><span class="az fwxb">PIEZAS: </span><%= producto.piezas %> </span>
+          <!-- <span><span class="az fwxb">PIEZAS: </span><%= producto.piezas %> </span> -->
         </div>
 
       </div>
