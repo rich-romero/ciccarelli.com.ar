@@ -181,8 +181,9 @@ section.newsletters {
 }
 
 video {
-  min-width: 150%;
-  min-height: 100%;
+  max-width: 150%;
+  max-height: 100vh;
+  min-width: 100%;
 }
 
 .pvideo{
