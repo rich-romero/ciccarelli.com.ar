@@ -7,7 +7,7 @@
 }
 
 .logofooterlogin {
-    width: 200px;
+    width: 200px; 
 }
 .link-login{
     color: black;
@@ -17,7 +17,7 @@
 
 form.formlogin {
     display: flex;
-    flex-direction: column;
+    flex-direction: column ;
     margin: 100px;
 }
 
