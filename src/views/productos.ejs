@@ -20,10 +20,11 @@
                     </div>
                     <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
                     <div class="textproducts">
-                        <span><%= producto.marca %> </span>
-                        <span><%= producto.modelo %> </span>
-                        <span><%= producto.motor %> </span>
-                        <span><%= producto.cilindradas %> </span>
+                        <span>
+                            <span style="font-weight: bold;">MODELOS:</span>
+                            <%= producto.modelo %>
+                        <span style="font-weight: bold;">MOTOR: </span><%= producto.motor %> 
+                        <span style="font-style: italic;"><%= producto.cilindradas %> </span>
                         <!-- <span><%= producto.piezas %> </span> -->
                     </div>
                 </a>

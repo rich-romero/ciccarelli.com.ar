@@ -38,7 +38,7 @@
     flex-direction: column;
     color: black;
     font-size: 18px;
-    padding: 20px 0 0;
+    padding: 10px 0 0;
 }
 
 .textproducts span{
@@ -62,4 +62,29 @@
     margin: 70px auto;
     height: auto;
     flex-direction: row;
+}
+
+.containerproductdetail {
+    align-items: flex-start;
+}
+.containerproductdetail .imgproductdetail{
+    WIDTH: 66%;
+}
+.containerproductdetail .containerinfoproduct{
+    WIDTH: 33%;
+    padding: 0 0 20px;
+}   
+
+@media screen and (max-width: 800px){
+
+    .containerproductdetail {
+        flex-direction: column;
+    }
+    .containerproductdetail .imgproductdetail{
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .containerproductdetail .containerinfoproduct{
+        width: auto;
+    }   
 }
