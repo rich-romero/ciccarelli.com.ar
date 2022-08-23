@@ -2,16 +2,16 @@ const express = require('express')
 const app = express()
 const PORT = 3000;
 const path = require('path')
-const method0verride =  require('method-override');
+const method0verride = require('method-override');
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 
 
 //---------View engine setup------------------
 
-app.set('views', path.join(__dirname, 'views')); 
+app.set('views', path.join(__dirname, 'views'));
 
-app.set('view engine','ejs'); 
+app.set('view engine', 'ejs');
 
 /* Middlewares */
 
@@ -44,14 +44,8 @@ http://localhost:${PORT}
 
 
 /* ----------- ERROR 404 ---------------*/
- app.use((req, res, next) => {
+app.use((req, res, next) => {
     res.status(404).render('404-page', {
-        session: req.session  
-    }) 
+        session: req.session
     })
-    
-
-
-
-
-
+});

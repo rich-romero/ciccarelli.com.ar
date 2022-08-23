@@ -2,72 +2,71 @@
 <html lang="en">
 <%- include('./partials/head'); %>
 
-<body>
-  <%- include('./partials/header'); %>
-  <%- include('./partials/nav'); %>
-<!-- whatsapp -->
-<!-- 
+    <body>
+        <%- include('./partials/header'); %>
+            <%- include('./partials/nav'); %>
+                <!-- whatsapp -->
+                <!-- 
 <a href="https://api.whatsapp.com/send?phone=+5491168661379" class="btn-wsp" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
  -->
-  <main>
-    <!-- Video inicial -->
-    <section class="showcase">
+                <main>
+                    <!-- Video inicial -->
+                    <section class="showcase">
 
-      <video src="/images/ciccarelli.mp4" muted="" loop="" autoplay=""></video>
+                        <video src="/images/homevideo.mp4" muted="" loop="" autoplay="" poster="/images/homevideoposter.webp"></video>
 
-      <div class="text" >
-        <!-- <h1 class="f1 am">Juntas Ciccarelli</h2> -->
-        <h2 class="f1 bc">85 AÑOS DE CALIDAD</h2>
-        <p class="f2 pvideo fwm fsi">Líder en Soluciones de Juntas 
-          de Motor, con la mejor calidad y rentabilidad del mercado.</p>
+                        <div class="text">
+                            <!-- <h1 class="f1 am">Juntas Ciccarelli</h2> -->
+                            <h2 class="f1 bc">85 AÑOS DE CALIDAD</h2>
+                            <p class="f2 pvideo fwm fsi">Líder en Soluciones de Juntas de Motor, con la mejor calidad y rentabilidad del mercado.</p>
 
-        <div>
-          <a target="_blank" href="http://ecommerce.ciccarelli.com.ar/catalogo?">
-            <button class="btn btn--light">
+                            <div>
+                                <a target="_blank" href="http://ecommerce.ciccarelli.com.ar/catalogo?">
+                                    <button class="btn btn--light">
               <span class="btn__inner">
                 <span class="btn__slide"></span>
                 <span class="btn__content">Ver catálogo</span>
               </span>
             </button>
-          </a>
-          <!-- <a href="#catalogospdf" style="text-align: center;"> Catálogos PDF </a> -->
-        </div>
-      </div>
-      <div class="gradtoblue" style="width: 100%;height: 100px;bottom: 0;"></div>
+                                </a>
+                                <!-- <a href="#catalogospdf" style="text-align: center;"> Catálogos PDF </a> -->
+                            </div>
+                        </div>
+                        <div class="gradtoblue" style="width: 100%;height: 100px;bottom: 0;"></div>
 
-    </section>
+                    </section>
 
-    <!-- Section / Newsletters -->
-    <section class="newsletters">
-      <div class="newsletterscontainer faz pr">
-          <h2 class="titlenewsletter sectitle f2 fwxl am fup">Nuevos Lanzamientos</h2>
+                    <!-- Section / Newsletters -->
+                    <section class="newsletters">
+                        <div class="newsletterscontainer faz pr">
+                            <h2 class="titlenewsletter sectitle f2 fwxl am fup">Nuevos Lanzamientos</h2>
 
-        <div class="cardscontainer">
-          <% producto.forEach(producto => { %>
+                            <div class="cardscontainer">
+                                <% producto.forEach(producto => { %>
 
-             <div class="newsletterscards" style="margin: 30px 10px;">
-               <a class="cardproductsA" href="/productos/<%= producto.id %>/">
+                                    <div class="newsletterscards" style="margin: 30px 10px;">
+                                        <a class="cardproductsA" href="/productos/<%= producto.id %>/">
 
-                 <div class="containerimg">
-                   <img src="/images/productos/<%= producto.image %> " alt="">
-                 </div>
-                 <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
-                 <div class="textproducts">
-                   <!-- <span><%= producto.marca %> </span>
+                                            <div class="containerimg">
+                                                <img src="/images/productos/<%= producto.image %> " alt="">
+                                            </div>
+                                            <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
+                                            <div class="textproducts">
+                                                <!-- <span><%= producto.marca %> </span>
                    <span><%= producto.modelo %> </span>
                    <span><%= producto.motor %> </span>
                    <span><%= producto.cilindradas %> </span>
                    <span><%= producto.piezas %> </span> -->
-                 </div>
-               </a>
+                                            </div>
+                                        </a>
 
-             </div>
+                                    </div>
 
-          <% }) %>
+                                    <% }) %>
 
-         <!--  <div class="newsletterscards" style="margin: 30px 10px;">
+                                        <!--  <div class="newsletterscards" style="margin: 30px 10px;">
             <div class="containerimg">
               <img src="/images/news1.jpg" alt="">
             </div>
@@ -90,18 +89,18 @@
             <span class="titlecard f3 az fwxb">Honda-Civic</span>
             <small>Junta Tapa de Cilindro</small>
           </div> -->
-        </div>
+                            </div>
 
-        <div class="titlenewsletter">
-          <h2><a href="/newsletters">Ver newsletters</a></h2>
-        </div>
+                            <div class="titlenewsletter">
+                                <h2><a href="/newsletters">Ver newsletters</a></h2>
+                            </div>
 
-      </div>
+                        </div>
 
 
-    </section>
+                    </section>
 
-    <!-- Section carousel Oculta
+                    <!-- Section carousel Oculta
     <section class="carousel" style="position: relative; display: none;">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -153,84 +152,84 @@
     </section>
      -->
 
-    <!-- Section productos -->
-    <section class="section_productos">
-      <div class="textproductos">
-        <h2>CONOCE LA LÍNEA <br>
-        CICCARELLI</h2>
-<!--         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, distinctio rem, tempora accusantium repudiandae ea officia odio fugiat porro vel laudantium labore quae libero! Quod obcaecati repellat eum aut dicta.</span>
- -->        <a class="hovexpand" href="/productos">Ver Productos</a>
-      </div>
-      <div class="containerimg">
-        <img class="hovexpand" src="/images/prodscica.PNG" alt="">
-      </div>
-      <a class="hovexpand bb" href="/productos">Ver Productos</a>
-    </section>
-  
-    <!-- Section catalogos PDF -->
-    <section id="catalogospdf" class="catalogoshome">
+                    <!-- Section productos -->
+                    <section class="section_productos">
+                        <div class="textproductos">
+                            <h2>CONOCE LA LÍNEA <br> CICCARELLI
+                            </h2>
+                            <!--         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, distinctio rem, tempora accusantium repudiandae ea officia odio fugiat porro vel laudantium labore quae libero! Quod obcaecati repellat eum aut dicta.</span>
+ --><a class="hovexpand" href="/productos">Ver Productos</a>
+                        </div>
+                        <div class="containerimg">
+                            <img class="hovexpand" src="/images/prodscica.webp" alt="">
+                        </div>
+                        <a class="hovexpand bb" href="/productos">Ver Productos</a>
+                    </section>
 
-      <div class="cat_title">
-        <h2>CATÁLOGOS COMPLETOS</h2>
-      </div>
+                    <!-- Section catalogos PDF -->
+                    <section id="catalogospdf" class="catalogoshome">
 
-      <div class="containercatalogos">
-        
+                        <div class="cat_title">
+                            <h2>CATÁLOGOS COMPLETOS</h2>
+                        </div>
 
-        <div class="catalogospdf hovexpand">
-          <a href="https://drive.google.com/file/d/1OdLQgGZOEvFySCjy1hQHnNyS94ZbgaHa/view?usp=sharing" target="_blank">
-          <div class="catcontainerimg">
-            <img src="/images/catalogo-pesado.jpg" alt="">
-          </div>
-          <div class="cattitle">
-            <span>Línea pesada </span>
-          </div>
-        </a>
-        </div>
-
-        <div class="catalogospdf hovexpand">
-          <a href="https://drive.google.com/file/d/16vjXKcbSQMcfvbZvQmEhSSIIuniEE43o/view?usp=sharing" target="_blank">
-          <div class="catcontainerimg">
-            <img src="/images/catliviano.jpg" alt="">
-          </div>
-          <div class="cattitle">
-            <span>Línea liviana</span>
-          </div>
-        </a>
-        </div>
-
-        <div class="catalogospdf hovexpand">
-          <a href="https://drive.google.com/file/d/1_rox7ivLOUH_sFQ3O9m5Y8tx3qL2ZPBD/view?usp=sharing" target="_blank">
-          <div class="catcontainerimg">
-            <img src="/images/catalogo-competicion.jpg" alt="">
-          </div>
-          <div class="cattitle">
-            <span>Competición</span>
-          </div>
-        </a>
-        </div>
-
-        <div class="catalogospdf hovexpand">
-          <a href="https://drive.google.com/file/d/1eEoHumKPmQK92_N5kyIjDWp01hRUBz-W/view?usp=sharing" target="_blank">
-          <div class="catcontainerimg">
-            <img src="/images/Catalogo-Compresores.jpg" alt="">
-          </div>
-          <div class="cattitle">
-            <span>Compresores</span>
-          </div>
-        </a>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <%- include('./partials/footer'); %>
+                        <div class="containercatalogos">
 
 
-  <%- include('./partials/scripts'); %>
+                            <div class="catalogospdf hovexpand">
+                                <a href="https://drive.google.com/file/d/1OdLQgGZOEvFySCjy1hQHnNyS94ZbgaHa/view?usp=sharing" target="_blank">
+                                    <div class="catcontainerimg">
+                                        <img src="/images/catalogo-pesado.webp" alt="">
+                                    </div>
+                                    <div class="cattitle">
+                                        <span>Línea pesada </span>
+                                    </div>
+                                </a>
+                            </div>
 
-</body>
+                            <div class="catalogospdf hovexpand">
+                                <a href="https://drive.google.com/file/d/16vjXKcbSQMcfvbZvQmEhSSIIuniEE43o/view?usp=sharing" target="_blank">
+                                    <div class="catcontainerimg">
+                                        <img src="/images/catliviano.webp" alt="">
+                                    </div>
+                                    <div class="cattitle">
+                                        <span>Línea liviana</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="catalogospdf hovexpand">
+                                <a href="https://drive.google.com/file/d/1_rox7ivLOUH_sFQ3O9m5Y8tx3qL2ZPBD/view?usp=sharing" target="_blank">
+                                    <div class="catcontainerimg">
+                                        <img src="/images/catalogo-competicion.webp" alt="">
+                                    </div>
+                                    <div class="cattitle">
+                                        <span>Competición</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="catalogospdf hovexpand">
+                                <a href="https://drive.google.com/file/d/1eEoHumKPmQK92_N5kyIjDWp01hRUBz-W/view?usp=sharing" target="_blank">
+                                    <div class="catcontainerimg">
+                                        <img src="/images/Catalogo-Compresores.webp" alt="">
+                                    </div>
+                                    <div class="cattitle">
+                                        <span>Compresores</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </main>
+
+                <%- include('./partials/footer'); %>
+
+
+                    <%- include('./partials/scripts'); %>
+
+    </body>
 
 </html>

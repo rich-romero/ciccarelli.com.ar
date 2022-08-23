@@ -1,15 +1,14 @@
-.banner img{
-    width: 100%;   
-}
-
-.sncontainer{
+.banner img {
     width: 100%;
 }
 
-.snsection{
+.sncontainer {
+    width: 100%;
+}
+
+.snsection {
     display: flex;
     align-items: center;
-
 }
 
 .sn_title {
@@ -17,12 +16,13 @@
     justify-content: center;
 }
 
-.sn_title h2{
+.sn_title h2 {
     color: white;
     background-color: rgb(0 20 103 / 90%);
     padding: 10px;
     border-radius: 10px;
 }
+
 .introText {
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +33,7 @@
     border: 1px solid rgb(0 20 103 / 90%);
     border-radius: 20px;
 }
+
 .article_content {
     display: flex;
     flex-direction: column;
@@ -40,13 +41,12 @@
 }
 
 .introText p {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.containerbanner{
+.containerbanner {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -54,6 +54,7 @@
 
 
 /* Competicion css */
+
 .row.zt-services {
     display: flex;
 }
@@ -66,6 +67,39 @@ p.des {
     margin: 15px;
 }
 
-.snimg{
-        width: 250px;
+.snimg {
+    width: 250px;
+}
+
+img.certifiedimg1 {
+    margin-top: 35px;
+}
+
+
+/* Calidad */
+
+.imgcalidadcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 66%;
+}
+
+.certifiedimg {
+    width: 150px;
+}
+
+img.expimgizq1 {
+    width: 500px;
+}
+
+.expimgizq {
+    width: 200px;
+    margin-left: 30px;
+}
+
+.exportacionimgtext {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
