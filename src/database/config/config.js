@@ -2,7 +2,7 @@ module.exports = {
     "development": {
         "username": "ciccare_admin",
         "password": "qr=u;e4vmjxd",
-        "database": "prueba",
+        "database": "ciccare_juntasciccarellidb",
         "host": "127.0.0.1",
         "dialect": "mysql"
     },
