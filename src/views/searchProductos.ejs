@@ -2,55 +2,58 @@
 <html lang="en">
 <%- include('./partials/head'); %>
 
-<body>
-    <%- include('./partials/header'); %>
-    <%- include('./partials/nav'); %>
-    <main>
+    <body>
+        <%- include('./partials/header'); %>
+            <%- include('./partials/nav'); %>
+                <main>
+                    <div class="containerbuscarnoticia">
+                        <form action="/searchProductos" method="get">
+                            <input class="searchnoticiasinput" type="text" name="keywords" placeholder="Buscar Newsletters">
+                            <button class="searchbutton">Buscar</button>
+                        </form>
+                    </div>
 
 
 
+                    <div class="containerproducts">
 
-        <div class="containerproducts">
-
-  <!--  
+                        <!--  
         Ricky   
     <div class="results">
        <h3>Resultados de la búsqueda: <b><%- search %></b> </h3>
    </div> -->
 
-            <% if(producto.length >= 1){ %>
+                        <% if(producto.length >= 1){ %>
 
-            <% producto.forEach(producto => { %>
+                            <% producto.forEach(producto => { %>
 
-            <div class="newsletterscards" style="margin: 30px 10px;">
-                <a class="cardproductsA" href="/noticias/<%= producto.id %>/">
+                                <div class="newsletterscards" style="margin: 25px 10px; padding: 30px; height: inherit;">
+                                    <a class="cardproductsA" href="/productos/<%= producto.id %>/" style="height: 100%;">
+                                        <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
+                                        <div class="containerimg" style="margin: 10px 0;    height: auto;">
+                                            <img src="/images/productos/<%= producto.image %> " alt="">
+                                        </div>
+                                        <div class="textproducts" style="padding: 0;margin-top: 10px;">
+                                            <span><%= producto.marca %> </span>
+                                            <span><%= producto.modelo %> </span>
+                                            <span><%= producto.motor %> </span>
+                                            <span><%= producto.cilindradas %> </span>
+                                            <!-- <span><%= producto.piezas %> </span> -->
+                                        </div>
+                                    </a>
 
-                    <div class="containerimg">
-                        <img src="/images/productos/<%= producto.image %> " alt="">
-                    </div>
-                    <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
-                    <div class="textproducts">
-                        <span><%= producto.marca %> </span>
-                        <span><%= producto.modelo %> </span>
-                        <span><%= producto.motor %> </span>
-                        <span><%= producto.cilindradas %> </span>
-                        <span><%= producto.piezas %> </span>
-                    </div>
-                </a>
+                                </div>
+                                <% }) %>
 
-            </div>
-            <% }) %>
+                                    <% } else{ %>
 
-            <% } else{ %>
+                                        <div class="noresultcontainer">
 
-            <div class="noresultcontainer">
+                                            <div class="noresultdiv">
+                                                <span class="searchresulth2">Resultados de la búsqueda: <b><%- search %></b> </span>
+                                            </div>
 
-                <div class="noresultdiv">
-                    <span class="searchresulth2">Resultados de la búsqueda: <b><%- search %></b> </span>
-                </div>
-
-                <div class="noResults"><svg class="BannerNoSuggestion_NotFoundImageStyled-shopping-uisc-vjcb3w-0 gLxMkm"
-                        xmlns="http://www.w3.org/2000/svg" width="70" height="66" viewBox="0 0 70 66">
+                                            <div class="noResults"><svg class="BannerNoSuggestion_NotFoundImageStyled-shopping-uisc-vjcb3w-0 gLxMkm" xmlns="http://www.w3.org/2000/svg" width="70" height="66" viewBox="0 0 70 66">
                         <g fill="none" fill-rule="evenodd">
                             <path d="M0 0h70v66H0z"></path>
                             <path fill="#CDC2F2" fill-rule="nonzero"
@@ -67,40 +70,38 @@
                             </path>
                         </g>
                     </svg>
-                    <div class="styledStyledSubtitle-shopping-uisc-1eiyye1-4 gcVYMO">
-                        <p>No encontramos resultados para <span
-                                class="styledSemiBoldSpan-shopping-ui_sc-1eiyye1-9 ipvZnN"><%- search %>.</span>
-                        </p>
-                        <p>Utilizá palabras genéricas o navegá por las categorías para encontrar productos
-                            similares.</p>
+                                                <div class="styledStyledSubtitle-shopping-uisc-1eiyye1-4 gcVYMO">
+                                                    <p>No encontramos resultados para <span class="styledSemiBoldSpan-shopping-ui_sc-1eiyye1-9 ipvZnN"><%- search %>.</span>
+                                                    </p>
+                                                    <p>Utilizá palabras genéricas o navegá por las categorías para encontrar productos similares.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <a style="color: black; text-decoration: underline; margin-top: 10px;" href="/newsletters">Volver a la sección de Newsletters</a>
+
+                                        </div>
+
+
+                                        <% } %>
+
+
+
+
+
                     </div>
-                </div>
-
-                <a style="color: black; text-decoration: underline; margin-top: 10px;" href="/productos">Volver a la
-                    sección Productos</a>
-
-            </div>
-
-
-            <% } %>
 
 
 
 
 
-        </div>
+                </main>
+
+                <%- include('./partials/footer'); %>
 
 
+                    <%- include('./partials/scripts'); %>
 
-
-
-    </main>
-
-    <%- include('./partials/footer'); %>
-
-
-    <%- include('./partials/scripts'); %>
-
-</body>
+    </body>
 
 </html>

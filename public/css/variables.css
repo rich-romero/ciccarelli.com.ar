@@ -3,101 +3,122 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;    
+    font-family: 'Montserrat', sans-serif;
 }
 
-
+body {
+    display: block;
+}
 
 html {
-  scroll-behavior: smooth;
-  
+    scroll-behavior: smooth;
 }
 
 :root {
-  --background-color: #0f1923;   
-  --button-text-color: var(--background-color);
-  --button-text-color-hover: var(--button-background-color);
-  --border-color: #7D8082;
-  --button-background-color: #ece8e1;
-  --highlight-color: #ff4655;
-  --button-inner-border-color: transparent;
-  --button-bits-color: var(--background-color);
-  --button-bits-color-hover: var(--button-background-color);
+    --background-color: #0f1923;
+    --button-text-color: var(--background-color);
+    --button-text-color-hover: var(--button-background-color);
+    --border-color: #7D8082;
+    --button-background-color: #ece8e1;
+    --highlight-color: #ff4655;
+    --button-inner-border-color: transparent;
+    --button-bits-color: var(--background-color);
+    --button-bits-color-hover: var(--button-background-color);
 }
+
+
 /* 96px 19.2*/
-.f1{
-  font-size: 5vw;
+
+.f1 {
+    font-size: 5vw;
 }
+
 
 /* 90px */
-.f2{
-  font-size: 4.6875vw;
+
+.f2 {
+    font-size: 4.6875vw;
 }
+
+
 /* 48px */
-.f3{
-  font-size: 2.5vw;
+
+.f3 {
+    font-size: 2.5vw;
 }
 
-.fwxl{
-  font-weight: 200;
-}
-.fwm{
-  font-weight: 500;
-}
-.fwsb{
-  font-weight: 600;
-}
-.fwxb{
-  font-weight: 700;
+.fwxl {
+    font-weight: 200;
 }
 
-.fsi{
-  font-style: italic;
+.fwm {
+    font-weight: 500;
 }
 
-
-.fup{
-  text-transform: uppercase;
-}
-.f36{
-  font-size: 36px;
-}
-.f24{
-  font-size: 24px;
-}
-.f12{
-  font-size: 12px;
+.fwsb {
+    font-weight: 600;
 }
 
-.faz{
-  background-color: #002F87;
-}
-.fam{
-  background-color: #FFD100;
-}
-.fbc{
-  background-color: white;
-}
-.fne{
-  background-color: black;
+.fwxb {
+    font-weight: 700;
 }
 
-.az{
-  color: #002F87;
-}
-.am{
-  color: #FFD100;
-}
-.bc{
-  color: white;
-}
-.ne{
-  color: black;
+.fsi {
+    font-style: italic;
 }
 
-.pr{
-  position: relative;
+.fup {
+    text-transform: uppercase;
 }
-.pab{
-  position: absolute;
+
+.f36 {
+    font-size: 36px;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.faz {
+    background-color: #002F87;
+}
+
+.fam {
+    background-color: #FFD100;
+}
+
+.fbc {
+    background-color: white;
+}
+
+.fne {
+    background-color: black;
+}
+
+.az {
+    color: #002F87;
+}
+
+.am {
+    color: #FFD100;
+}
+
+.bc {
+    color: white;
+}
+
+.ne {
+    color: black;
+}
+
+.pr {
+    position: relative;
+}
+
+.pab {
+    position: absolute;
 }

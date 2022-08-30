@@ -1,4 +1,6 @@
 @import url(/css/variables.css);
+@import url(/css/loader.css);
+@import url(/css/modal.css);
 @import url(/css/header.css);
 @import url(/css/nav.css);
 @import url(/css/footer.css);

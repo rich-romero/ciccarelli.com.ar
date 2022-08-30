@@ -11,12 +11,12 @@ module.exports = (sequelize, dataTypes) => {
         nombre: {
             type: dataTypes.STRING(60),
             allowNull: false,
-        },  
+        },
 
         marca: {
             type: dataTypes.STRING(60),
             allowNull: false,
-        },  
+        },
         modelo: {
             type: dataTypes.STRING(70),
             allowNull: false,
@@ -37,6 +37,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(60),
             allowNull: true,
         }
+
     }
 
     const config = {
@@ -47,4 +48,4 @@ module.exports = (sequelize, dataTypes) => {
     const Producto = sequelize.define(alias, cols, config)
 
     return Producto
-} 
+}

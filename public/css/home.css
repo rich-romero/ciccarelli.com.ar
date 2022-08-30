@@ -69,11 +69,15 @@ section.showcase {
     min-height: 400px;
     position: relative;
     overflow: hidden;
+    height: 80vh;
 }
 
 section.showcase video {
+    max-height: 90vh;
+    min-width: 100%;
+    position: absolute;
+    min-height: 100%;
     opacity: 0.25;
-    height: 100%;
 }
 
 
@@ -94,6 +98,11 @@ section.newsletters {
     margin-bottom: 20px;
 }
 
+.suscribenewsletter {
+    background-color: black;
+    color: white;
+}
+
 .cardscontainer {
     display: flex;
     justify-content: center;
@@ -106,7 +115,7 @@ section.newsletters {
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     color: rgb(34, 34, 34);
-    /* height: 240px; */
+    height: 350px;
     width: 250px;
     align-items: center;
     justify-content: center;
@@ -133,7 +142,6 @@ section.newsletters {
 }
 
 .titlecard {
-    margin-top: 10px;
     font-size: 18px;
 }
 
@@ -186,9 +194,9 @@ section.newsletters {
 }
 
 video {
-    max-width: 150%;
+    /* max-width: 150%;
     max-height: 100vh;
-    min-width: 100%;
+    min-width: 100%; */
 }
 
 .pvideo {

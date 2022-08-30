@@ -2,69 +2,72 @@
 <html lang="en">
 <%- include('./partials/head'); %>
 
-<body>
-    <%- include('./partials/header'); %>
-    <%- include('./partials/nav'); %>
-    <main>
-  <div class="containerbuscarnoticia">
-      <form action="/search" method="get">
-          <input class="searchnoticiasinput" type="text" name="keywords" placeholder="Buscar noticias">
-          <button class="searchbutton">Buscar</button>
-      </form>
-  </div>
+    <body>
+        <%- include('./partials/header'); %>
+            <%- include('./partials/nav'); %>
+                <main>
+                    <div class="containerbuscarnoticia">
+                        <form action="/searchNoticias" method="get">
+                            <input class="searchnoticiasinput" type="text" name="keywords" placeholder="Buscar noticias">
+                            <button class="searchbutton">Buscar</button>
+                        </form>
+                    </div>
 
-        <div class="containerproducts">
+                    <div class="containerproducts">
 
-            <% if(noticia.length >= 1){ %>
-
-
-            <% noticia.forEach(noticia => { %>
-
-            <div>
-                <a href="/noticias/<%= noticia.id %>/">
+                        <% if(noticia.length >= 1){ %>
 
 
-                    <article class="module-news">
+                            <% noticia.forEach(noticia => { %>
 
-                        <div class="volanta">
-
-                            <span class="cat">Ciccarelli</span>
-
-                            <span class="date"><%= noticia.fecha %> </span>
-                        </div>
-
-                        <h2><%= noticia.titulo %> </h2>
+                                <div>
+                                    <a href="/noticias/<%= noticia.id %>/">
 
 
-                        <% if (noticia.imagen) { %>
-                        <div class="imgcardnoticia">
-                            <img src="/images/noticias/<%= noticia.imagen %> " alt="">
+                                        <article class="module-news">
 
-                        </div>
-                        <% } %>
+                                            <div class="volanta">
 
-                        <p><%= noticia.descripcion %></p>
+                                                <span class="cat">Ciccarelli</span>
 
-                    </article>
-                </a>
-            </div>
+                                                <span class="date"><%= noticia.fecha %> </span>
+                                            </div>
 
-
-            <% }) %>
+                                            <h2>
+                                                <%= noticia.titulo %>
+                                            </h2>
 
 
+                                            <% if (noticia.imagen) { %>
+                                                <div class="imgcardnoticia">
+                                                    <img src="/images/noticias/<%= noticia.imagen %> " alt="">
 
-            <% } else{ %>
+                                                </div>
+                                                <% } %>
 
-            <div class="noresultcontainer">
+                                                    <p>
+                                                        <%= noticia.descripcion.substr(0,50)+" ..." %>
+                                                    </p>
+
+                                        </article>
+                                    </a>
+                                </div>
 
 
-                <div class="noresultdiv">
-                    <span class="searchresulth2">Resultados de la busqueda de noticias: <b><%- search %></b> </span>
-                </div>
+                                <% }) %>
 
-                <div class="noResults"><svg class="BannerNoSuggestion_NotFoundImageStyled-shopping-uisc-vjcb3w-0 gLxMkm"
-                        xmlns="http://www.w3.org/2000/svg" width="70" height="66" viewBox="0 0 70 66">
+
+
+                                    <% } else{ %>
+
+                                        <div class="noresultcontainer">
+
+
+                                            <div class="noresultdiv">
+                                                <span class="searchresulth2">Resultados de la busqueda de noticias: <b><%- search %></b> </span>
+                                            </div>
+
+                                            <div class="noResults"><svg class="BannerNoSuggestion_NotFoundImageStyled-shopping-uisc-vjcb3w-0 gLxMkm" xmlns="http://www.w3.org/2000/svg" width="70" height="66" viewBox="0 0 70 66">
                         <g fill="none" fill-rule="evenodd">
                             <path d="M0 0h70v66H0z"></path>
                             <path fill="#CDC2F2" fill-rule="nonzero"
@@ -81,37 +84,36 @@
                             </path>
                         </g>
                     </svg>
-                    <div class="styledStyledSubtitle-shopping-uisc-1eiyye1-4 gcVYMO">
-                        <p>No encontramos resultados para <span
-                                class="styledSemiBoldSpan-shopping-ui_sc-1eiyye1-9 ipvZnN"><%- search %>.</span>
-                        </p>
-        
+                                                <div class="styledStyledSubtitle-shopping-uisc-1eiyye1-4 gcVYMO">
+                                                    <p>No encontramos resultados para <span class="styledSemiBoldSpan-shopping-ui_sc-1eiyye1-9 ipvZnN"><%- search %>.</span>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+                                            <a style="color: black; text-decoration: underline; margin-top: 10px;" href="/noticias">Volver a la sección Noticias</a>
+                                        </div>
+
+
+                                        <% } %>
+
+
+
+
+
                     </div>
-                </div>
-                
-                <a style="color: black; text-decoration: underline; margin-top: 10px;" href="/noticias">Volver a la sección Noticias</a>
-            </div>
-
-
-            <% } %>
 
 
 
 
 
-        </div>
+                </main>
+
+                <%- include('./partials/footer'); %>
 
 
+                    <%- include('./partials/scripts'); %>
 
-
-
-    </main>
-
-    <%- include('./partials/footer'); %>
-
-
-    <%- include('./partials/scripts'); %>
-
-</body>
+    </body>
 
 </html>

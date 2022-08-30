@@ -2,50 +2,54 @@
 <html lang="en">
 <%- include('./partials/head'); %>
 
-<body>
-    <%- include('./partials/header'); %>
-    <%- include('./partials/nav'); %>
-    <main>
-        
-        <div class="containerproducts">
-
-            <% producto.forEach(producto => { %>
-
-            <!-- new -->
-            <div class="newsletterscards" style="margin: 30px 10px;">
-                <a class="cardproductsA" href="/productos/<%= producto.id %>/">
-
-                    <div class="containerimg">
-                        <img src="/images/productos/<%= producto.image %> " alt="">
+    <body>
+        <%- include('./partials/header'); %>
+            <%- include('./partials/nav'); %>
+                <main>
+                    <div class="containerbuscarnoticia">
+                        <form action="/searchProductos" method="get">
+                            <input class="searchnoticiasinput" type="text" name="keywords" placeholder="Buscar Newsletters">
+                            <button class="searchbutton">Buscar</button>
+                        </form>
                     </div>
-                    <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
-                    <div class="textproducts">
-                        <span><%= producto.marca %> </span>
-                        <span><%= producto.modelo %> </span>
-                        <span><%= producto.motor %> </span>
-                        <span><%= producto.cilindradas %> </span>
-                        <!-- <span><%= producto.piezas %> </span> -->
+                    <div class="containerproducts">
+
+                        <% producto.forEach(producto => { %>
+
+                            <!-- new -->
+                            <div class="newsletterscards" style="margin: 25px 10px; padding: 30px; height: inherit;">
+                                <a class="cardproductsA" href="/productos/<%= producto.id %>/" style="height: 100%;">
+                                    <span class="titlecard f3 az fwxb"><%= producto.nombre %></span>
+                                    <div class="containerimg" style="margin: 10px 0;    height: auto;">
+                                        <img src="/images/productos/<%= producto.image %> " alt="">
+                                    </div>
+                                    <div class="textproducts" style="padding: 0;margin-top: 10px;">
+                                        <span><%= producto.marca %> </span>
+                                        <span><%= producto.modelo %> </span>
+                                        <span><%= producto.motor %> </span>
+                                        <span><%= producto.cilindradas %> </span>
+                                        <!-- <span><%= producto.piezas %> </span> -->
+                                    </div>
+                                </a>
+
+                            </div>
+
+                            <% }) %>
+
+
                     </div>
-                </a>
-
-            </div>
-
-            <% }) %>
-
-
-        </div>
 
 
 
 
 
-    </main>
+                </main>
 
-    <%- include('./partials/footer'); %>
+                <%- include('./partials/footer'); %>
 
 
-    <%- include('./partials/scripts'); %>
+                    <%- include('./partials/scripts'); %>
 
-</body>
+    </body>
 
 </html>

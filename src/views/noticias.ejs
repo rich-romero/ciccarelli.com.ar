@@ -2,71 +2,75 @@
 <html lang="en">
 <%- include('./partials/head'); %>
 
-<body>
-    <%- include('./partials/header'); %>
-    <%- include('./partials/nav'); %>
-    <main class="mainnoticias">
+    <body>
+        <%- include('./partials/header'); %>
+            <%- include('./partials/nav'); %>
+                <main class="mainnoticias">
 
 
-         <div class="containerbuscarnoticia">
-             <form action="/search" method="get">
-                 <input class="searchnoticiasinput" type="text" name="keywords" placeholder="Buscar noticias">
-                 <button class="searchbutton">Buscar</button>
-             </form>
-         </div>
-        
-        <div class="containernoticias">
+                    <div class="containerbuscarnoticia">
+                        <form action="/searchNoticias" method="get">
+                            <input class="searchnoticiasinput" type="text" name="keywords" placeholder="Buscar Noticias">
+                            <button class="searchbutton">Buscar</button>
+                        </form>
+                    </div>
 
-
-
-            <% noticia.forEach(noticia => { %>
-
-            <div>
-                <a class="hovexpand" href="/noticias/<%= noticia.id %>/">
-
-
-                    <article class="module-news">
-
-                        <div class="volanta">
-
-                            <span class="cat">Ciccarelli</span>
-
-                            <span class="date"><%= noticia.fecha %> </span>
-                        </div>
-
-                        <h2><%= noticia.titulo %> </h2>
-
-
-                        <% if (noticia.imagen) { %>
-                            <div class="imgcardnoticia" st>
-                                       <img src="/images/noticias/<%= noticia.imagen %> " alt="">
-                        
-                            </div>    
-                        <% } %>
-                        
-                        <p><%= noticia.descripcion.substr(0,50)+" ..." %></p>
-
-                    </article>
-                </a>
-            </div>
-
-
-            <% }) %>
-
-
-        </div>
+                    <div class="containernoticias">
 
 
 
+                        <% noticia.forEach(noticia => { %>
+
+                            <div>
+                                <a class="hovexpand" href="/noticias/<%= noticia.id %>/">
 
 
-    </main>
+                                    <article class="module-news">
 
-    <%- include('./partials/footer'); %>
+                                        <div class="volanta">
+
+                                            <span class="cat">Ciccarelli</span>
+
+                                            <span class="date"><%= noticia.fecha %> </span>
+                                        </div>
+
+                                        <h2>
+                                            <%= noticia.titulo %>
+                                        </h2>
 
 
-    <%- include('./partials/scripts'); %>
+                                        <% if (noticia.imagen) { %>
+                                            <div class="imgcardnoticia" st>
+                                                <img src="/images/noticias/<%= noticia.imagen %> " alt="">
 
-</body>
+                                            </div>
+                                            <% } %>
+
+                                                <p>
+                                                    <%= noticia.descripcion.substr(0,50)+" ..." %>
+                                                </p>
+
+                                    </article>
+                                </a>
+                            </div>
+
+
+                            <% }) %>
+
+
+                    </div>
+
+
+
+
+
+                </main>
+
+                <%- include('./partials/footer'); %>
+
+
+                    <%- include('./partials/scripts'); %>
+
+    </body>
 
 </html>

@@ -6,6 +6,10 @@ const method0verride = require('method-override');
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 
+/* //--------- CORS ------------------
+
+var cors = require('cors')
+app.use(cors()) // Use this after the variable declaration */
 
 //---------View engine setup------------------
 
